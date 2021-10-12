@@ -2,16 +2,19 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
 public class Sword : MonoBehaviour
 {
 
     public GameObject target;
-    public GameObject weapon;
     public float speed = 5f;
 
     void Weapon()
     {
+
+
+
         if (Input.GetKey(KeyCode.Space))
         {
             transform.RotateAround(target.transform.position, Vector3.right, speed);
@@ -21,6 +24,7 @@ public class Sword : MonoBehaviour
             //RotationDriveMode(target, transform.position, transform.rotation);
             //transform.RotateAround(target.transform.position, Vector3.right, speed);
         }
+        
     }
 
     void OnTriggerEnter(Collider other)

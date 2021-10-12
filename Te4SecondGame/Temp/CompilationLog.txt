@@ -1,4 +1,0 @@
-# Starting compiling Assembly-CSharp.dll
-C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\2020.3.19f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-b84a314ba1296904e876ca510507716b
-# Starting IL post processing on Assembly-CSharp.dll
-"C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/2020.3.19f1/Editor/Data/MonoBleedingEdge/bin/mono.exe" "C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/2020.3.19f1/Editor/Data/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @C:/Users/Mohammad.Saberi/Documents/GitHub/Te4SecondGame/Te4SecondGame/Temp/UnityTempFile-2177876b4b9ab384fa0376e09c914abe
