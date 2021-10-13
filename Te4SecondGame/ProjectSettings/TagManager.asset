@@ -6,6 +6,10 @@ TagManager:
   tags:
   - plane
   - weapon
+  - enemy
+  - lightAttack
+  - heavyAttack
+  - specialAttack
   layers:
   - Default
   - TransparentFX
