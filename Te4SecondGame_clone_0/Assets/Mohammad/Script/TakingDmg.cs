@@ -5,7 +5,7 @@ using UnityEngine;
 public class TakingDmg : MonoBehaviour
 {
     public float healthAmount = 100;
-    //public static TakingDmg instance;
+    //public TakingDmg instance;
     public GameObject target;
     public float speed = 5f;
 
