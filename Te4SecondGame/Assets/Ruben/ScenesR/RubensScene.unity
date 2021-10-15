@@ -459,8 +459,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4838ed30d6dd32743b739a8ee5039a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingTime: 0
+  attacking: 0
+  isInteracting: 0
+  currentState: 
   currentTime: 0.5
+  startingTime: 0
 --- !u!114 &754611150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -473,7 +476,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5350c9e2e35d69a4dbce0ab9d2896647, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInteracting: 0
 --- !u!1 &1516857521
 GameObject:
   m_ObjectHideFlags: 0

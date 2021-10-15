@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class HitManager : MonoBehaviour
 {
-    public bool isInteracting;
-    Animator animator;
+    //public bool isInteracting;
+    //Animator animator;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        animator = GetComponent<Animator>();
-    }
+    //// Start is called before the first frame update
+    //void Start()
+    //{
+    //    animator = GetComponent<Animator>();
+    //}
 
-    // Update is called once per frame
-    void Update()
-    {
-        isInteracting = animator.GetBool("isInteracting");
-    }
+    //// Update is called once per frame
+    //void Update()
+    //{
+    //    isInteracting = animator.GetBool("isInteracting");
+    //}
 }
