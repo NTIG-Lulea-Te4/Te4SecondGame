@@ -2,15 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
+
 
 public class PlayerNameInput : MonoBehaviour
 {
 
     [Header("UI")]
+    
     [SerializeField]
-    private TMP_InputField inputFieldForPlayerName;
-    [SerializeField] private Button confirmButton;
+    private InputField inputFieldForPlayerName;
+    
+    [SerializeField] 
+    private Button confirmButton;
 
     //Kan hämta värdet från andra klasser
     //men kan bara ge den ett nytt värde inom denna klass
