@@ -12,6 +12,7 @@ public class Effect : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag.Equals("weapon"))
+        //if (collision.collider.tag == "weapon")
         {
             Instantiate(blood, transform.position, transform.rotation);
             Instantiate(damageText, new Vector3(transform.position.x + 1 , transform.position.y, transform.position.z), transform.rotation);

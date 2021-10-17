@@ -10,7 +10,6 @@ public class SwordMovement : MonoBehaviour
     public GameObject target;
     public float speed = 5f;
     public static int attackDamage;
-    public int stamina = 100;
     //public static Vector3 startPos;
 
 
@@ -19,17 +18,17 @@ public class SwordMovement : MonoBehaviour
         if (Input.GetMouseButton(0))
         { 
             attackDamage = 10;
-            transform.RotateAround(target.transform.position, Vector3.right, speed);
+            transform.RotateAround(target.transform.position, new Vector3(1, 0, 0) , speed);
         }
         if (Input.GetMouseButton(1))
         {
             attackDamage = 20;
-            transform.RotateAround(target.transform.position, Vector3.up, speed);
+            transform.RotateAround(target.transform.position, new Vector3(0, 1, 0), speed);
         }
         if (Input.GetKey(KeyCode.Space))
         {
             attackDamage = 30;
-            transform.RotateAround(target.transform.position, Vector3.forward, speed);
+            transform.RotateAround(target.transform.position, new Vector3(0, 0, 1), speed);
         }
     }
     void Update()

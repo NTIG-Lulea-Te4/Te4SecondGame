@@ -15,19 +15,19 @@ public class Moving : NetworkBehaviour
          {
              if (Input.GetKey(KeyCode.W))
              {
-                 transform.Translate(Vector3.forward * speed * Time.deltaTime);
+                 transform.Translate( new Vector3(0, 0, 1) * speed * Time.deltaTime);
              }
              if (Input.GetKey(KeyCode.S))
              {
-                 transform.Translate(Vector3.back * speed * Time.deltaTime);
+                 transform.Translate( new Vector3(0, 0, -1) * speed * Time.deltaTime);
              }
              if (Input.GetKey(KeyCode.A))
              {
-                 transform.Translate(Vector3.left * speed * Time.deltaTime);
+                 transform.Translate( new Vector3(-1, 0, 0) * speed * Time.deltaTime);
              }
              if (Input.GetKey(KeyCode.D))
              {
-                 transform.Translate(Vector3.right * speed * Time.deltaTime);
+                 transform.Translate( new Vector3(1, 0, 0) * speed * Time.deltaTime);
              }
          }
     }

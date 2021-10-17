@@ -9,13 +9,13 @@ public class Health : MonoBehaviour
     //public SwordMovement swordMovement;
 
     void OnCollisionEnter(Collision collision)
-    { 
-        if (collision.gameObject.tag.Equals("enemy"))
+    {
+        if (collision.gameObject.tag.Equals("weapon"))
+        //if (collision.collider.tag == "weapon")
         {
+
             health -= SwordMovement.attackDamage;
-            print(health);
-
-
+            Debug.Log(health);
             //transform.position = swordMovement.StartPosition();
             //originalPos = gameObject.transform.position;
             //gameObject.transform.position = SwordMovement.StartPoint;
@@ -23,7 +23,7 @@ public class Health : MonoBehaviour
         }
         if (health <= 0)
         {
-            Destroy(collision.gameObject);
+            Destroy(gameObject);
         }
     }
 }

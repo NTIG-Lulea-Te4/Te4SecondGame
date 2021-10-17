@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class time : MonoBehaviour
 {
-    //public Vector3 RandomizeIntensity = new Vector3(0-5, 0, 0)
+    //public Vector3 RandomizeIntensity = new Vector3(0-5, 0, 0);
 
     void Start()
     {
