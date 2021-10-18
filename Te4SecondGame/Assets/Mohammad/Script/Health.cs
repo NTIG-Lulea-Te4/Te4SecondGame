@@ -13,7 +13,11 @@ public class Health : MonoBehaviour
         if (collision.gameObject.tag.Equals("weapon"))
         //if (collision.collider.tag == "weapon")
         {
-
+            if (Input.GetKey(KeyCode.K))
+            {
+                SwordMovement.attackDamage = 0;
+            }
+            else if ( )
             health -= SwordMovement.attackDamage;
             Debug.Log(health);
             //transform.position = swordMovement.StartPosition();
