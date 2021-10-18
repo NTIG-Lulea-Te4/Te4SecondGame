@@ -4,28 +4,40 @@ using UnityEngine;
 
 public class MovementScript : MonoBehaviour
 {
-    GameObject cube;
+    public CharacterController controller;
+    Vector3 direction;
+    float turnSmoothlySpeed;
+    float turnSmoothlyTime;
+    float faceThisWayAngle;
+    float faceThisWaySmoothly;
+    float speed;
+    float axisHorizontal;
+    float axisVertical;
     // Start is called before the first frame update
     void Start()
     {
-        cube = GameObject.Find("MovableCube");
 
+        turnSmoothlyTime = 0.1f;
+        speed = 6f;
+    
     }
 
     // Update is called once per frame
     void Update()
     {
+        axisHorizontal = Input.GetAxis("Horizontal");
+        axisVertical = Input.GetAxis("Vertical");
+        direction = new Vector3(axisHorizontal, 0f, axisVertical).normalized;
 
-        if (Input.GetKey(KeyCode.A))
+        if (direction.magnitude >= 0.1f)
         {
-            cube.transform.position = new Vector3(-1, 0, 0);
 
+            faceThisWayAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
+            faceThisWaySmoothly = Mathf.SmoothDampAngle(transform.eulerAngles.y, faceThisWayAngle, ref turnSmoothlySpeed, turnSmoothlyTime);
+            transform.rotation = Quaternion.Euler(0f, faceThisWaySmoothly, 0f);
+
+            controller.Move(direction * speed * Time.deltaTime);
         }
 
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.position = new Vector3(1, 0, 0);
-
-        }
     }
 }
