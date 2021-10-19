@@ -8,11 +8,11 @@ public class PlayerNameInput : MonoBehaviour
 {
 
     [Header("UI")]
-    
+
     [SerializeField]
     private InputField inputFieldForPlayerName;
-    
-    [SerializeField] 
+
+    [SerializeField]
     private Button confirmButton;
 
     //Kan hämta värdet från andra klasser
@@ -21,9 +21,17 @@ public class PlayerNameInput : MonoBehaviour
 
     const string playerPrefsNameKey = "PlayerName";
 
+    string nameCheck;
+
     private void Start()
     {
         SetUp();
+    }
+
+    public void Update()
+    {
+        nameCheck = inputFieldForPlayerName.text;
+        ActivateConfirmButton(nameCheck);
     }
 
     private void SetUp()
@@ -31,16 +39,15 @@ public class PlayerNameInput : MonoBehaviour
         /*Kollar ifall det finns ett namn i PlayerPrefs
         Om det inte finns "Returnar" om det finns så hämtar vi namnet
         och placerar det i input fältet*/
-        if (!PlayerPrefs.HasKey(playerPrefsNameKey))
+        if (PlayerPrefs.HasKey(playerPrefsNameKey))
         {
-            return;
+
+            string tmpNameHolder = PlayerPrefs.GetString(playerPrefsNameKey);
+
+            inputFieldForPlayerName.text = tmpNameHolder;
+
+            
         }
-
-        string tmpNameHolder = PlayerPrefs.GetString(playerPrefsNameKey);
-
-        inputFieldForPlayerName.text = tmpNameHolder;
-
-        ActivateConfirmButton(tmpNameHolder);
     }
 
     //Kollar ifall namnet är "valid", om det är det så kan man

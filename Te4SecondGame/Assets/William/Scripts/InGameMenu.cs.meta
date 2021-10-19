@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 1dd22a385a2adac4092a3ef7f02a4ebb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - inGameMenu: {fileID: 8424236496362584265, guid: ed29ece6f6ca4a04c9c9704a3b323120, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -67,9 +67,31 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1472}
+    - Class: 114
+      Script: {instanceID: 1474}
+    - Class: 114
+      Script: {instanceID: 2086}
+    - Class: 114
+      Script: {instanceID: 2414}
+    - Class: 114
+      Script: {instanceID: 3018}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
     Assets/William/Scenes/WilliamsScene.unity:
     - Class: 1
@@ -129,33 +151,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2764}
     - Class: 114
-      Script: {instanceID: 2922}
+      Script: {instanceID: 2906}
     - Class: 114
-      Script: {instanceID: 3016}
+      Script: {instanceID: 2924}
     - Class: 114
-      Script: {instanceID: 3110}
+      Script: {instanceID: 3018}
     - Class: 114
-      Script: {instanceID: 3716}
+      Script: {instanceID: 3112}
     - Class: 114
-      Script: {instanceID: 3778}
+      Script: {instanceID: 3718}
     - Class: 114
-      Script: {instanceID: 3942}
+      Script: {instanceID: 3780}
     - Class: 114
-      Script: {instanceID: 4036}
+      Script: {instanceID: 3944}
     - Class: 114
-      Script: {instanceID: 4072}
+      Script: {instanceID: 4038}
     - Class: 114
-      Script: {instanceID: 4090}
+      Script: {instanceID: 4074}
     - Class: 114
-      Script: {instanceID: 4202}
+      Script: {instanceID: 4092}
     - Class: 114
-      Script: {instanceID: 4248}
+      Script: {instanceID: 4204}
     - Class: 114
-      Script: {instanceID: 4354}
+      Script: {instanceID: 4250}
     - Class: 114
-      Script: {instanceID: 4382}
+      Script: {instanceID: 4356}
     - Class: 114
-      Script: {instanceID: 23364}
+      Script: {instanceID: 4384}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -539,6 +561,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.Additive
     className: AdditiveNetworkManager
+  - hash:
+      serializedVersion: 2
+      Hash: 43dbcbbfe89e6a6f6be123e344663a4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MenuScript
   - hash:
       serializedVersion: 2
       Hash: 4e0c63e49a9e2ef70afb47e3a0e28bc2
@@ -1103,12 +1131,6 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.NetworkRoom
     className: NetworkRoomPlayerExt
-  - hash:
-      serializedVersion: 2
-      Hash: 1c42d16d2407722a79f63b21df324079
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MenuScript
   platform: 19
   scenePathNames:
   - Assets/William/Scenes/WilliamsScene.unity

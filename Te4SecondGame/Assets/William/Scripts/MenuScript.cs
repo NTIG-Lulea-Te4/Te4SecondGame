@@ -19,16 +19,19 @@ public class MenuScript : MonoBehaviour
     [SerializeField]
     private InputField inputFieldForIpAdress;
 
+
     #endregion
 
-    bool isEscapedPressed;
+
+
 
     public void OnHostButtonClick()
     {
-
         networkManager.StartHost();
 
     }
+
+    #region UI Panel on/off
 
     public void OnJoinAsClientClick()
     {
@@ -44,11 +47,10 @@ public class MenuScript : MonoBehaviour
 
     }
 
-    //public void SetIpAdress(string ipAdress)
-    //{
-    //    networkManager.networkAddress = ipAdress;
-    //}
+    #endregion
 
+    //Ger nätverks adressen ett nytt värde beroande på vad som skivs in i inputfield
+    //Sedan connectar clienten med servern med nätverks adressen
     public void OnJoinServerClick()
     {
         string ipAdress = inputFieldForIpAdress.text;
@@ -59,33 +61,15 @@ public class MenuScript : MonoBehaviour
 
     }
 
-    public void OnExitClick()
+    static public void OnExitClick()
     {
         Application.Quit();
     }
 
-    public void OnMainMenuClick()
+    static public void OnMainMenuClick()
     {
 
     }
 
-    void Start()
-    {
-        isEscapedPressed = false;
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            isEscapedPressed = !isEscapedPressed;
-        }
-        if (isEscapedPressed)
-        {
-
-
-        }
-
-
-    }
+    
 }
