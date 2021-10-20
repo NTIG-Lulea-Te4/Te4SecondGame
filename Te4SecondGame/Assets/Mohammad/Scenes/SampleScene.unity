@@ -551,7 +551,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 135028487}
   speed: 5
-  stamina: 100
 --- !u!1 &1231430649
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,9 +779,9 @@ GameObject:
   - component: {fileID: 1763823286}
   - component: {fileID: 1763823285}
   - component: {fileID: 1763823284}
-  - component: {fileID: 1763823290}
-  - component: {fileID: 1763823288}
   - component: {fileID: 1763823289}
+  - component: {fileID: 1763823288}
+  - component: {fileID: 1763823290}
   m_Layer: 0
   m_Name: Cube
   m_TagString: enemy
@@ -875,12 +874,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1763823283}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1f3d096fd1c66e45b2bc364497c4cc5, type: 3}
+  m_Script: {fileID: 11500000, guid: ba2e448369837c84f8c8a854df04ef86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blood: {fileID: 1000013355911406, guid: d32aa916f50cac94db11e6f19821a58f, type: 3}
-  death: {fileID: 1834194341294532, guid: d5f26854a8904624c8073139cd2eb346, type: 3}
-  damageText: {fileID: 9123674844181685227, guid: 515faa8600ece6d4e94c3d4d081674dd, type: 3}
 --- !u!54 &1763823289
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -906,6 +902,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1763823283}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a8f730c594c7cf42a86e3d5eee150d2, type: 3}
+  m_Script: {fileID: 11500000, guid: 18cdca514ce0c984d973232505f6934e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blood: {fileID: 2135273490607513796, guid: 8a93287e1f7f89a499aae74c22aa8fc2, type: 3}
+  death: {fileID: 1834194341294532, guid: d5f26854a8904624c8073139cd2eb346, type: 3}
+  damageText: {fileID: 9123674844181685227, guid: 515faa8600ece6d4e94c3d4d081674dd, type: 3}

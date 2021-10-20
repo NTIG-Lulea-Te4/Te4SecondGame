@@ -16,8 +16,7 @@ public class Effect : MonoBehaviour
         {
             Instantiate(blood, transform.position, transform.rotation);
             damageText.text = SwordMovement.attackDamage.ToString();
-            Instantiate(damageText, new Vector3(transform.position.x + 1 , transform.position.y, transform.position.z), transform.rotation);
-
+            Instantiate(damageText, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), transform.rotation);
         }
         if (Health.health <= 0)
         {

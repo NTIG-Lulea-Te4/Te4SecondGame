@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class Health : MonoBehaviour
+public class Health : NetworkBehaviour
 {
     public static int health = 100;
+    private int dmg;
     //public Effect instance;
     //public SwordMovement swordMovement;
 
@@ -13,16 +15,24 @@ public class Health : MonoBehaviour
         if (collision.gameObject.tag.Equals("weapon"))
         //if (collision.collider.tag == "weapon")
         {
-            if (Input.GetKey(KeyCode.K))
+            dmg = SwordMovement.attackDamage;
+
+            if (isLocalPlayer)
             {
-                SwordMovement.attackDamage = 0;
+                if (Input.GetKey(KeyCode.E))
+                {
+                    dmg = 0;
+                }
+                else
+                {
+                    health -= dmg;
+                    //health -= SwordMovement.attackDamage;
+                    Debug.Log(health);
+                    //transform.position = swordMovement.StartPosition();
+                    //originalPos = gameObject.transform.position;
+                    //gameObject.transform.position = SwordMovement.StartPoint;
+                }
             }
-            else if ( )
-            health -= SwordMovement.attackDamage;
-            Debug.Log(health);
-            //transform.position = swordMovement.StartPosition();
-            //originalPos = gameObject.transform.position;
-            //gameObject.transform.position = SwordMovement.StartPoint;
 
         }
         if (health <= 0)

@@ -1,31 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
 public class TestHealth : MonoBehaviour
 {
-    public int stamina = 100;
-    //public float delay = 2;
+    public static int health = 100;
 
-    void OnTriggerEnter(Collider colider)
+
+    void OnCollisionEnter(Collision collision)
     {
-        if (colider.gameObject.tag == "weapon")
+        if (collision.gameObject.tag.Equals("weapon"))
+        //if (collision.collider.tag == "weapon")
         {
-            Destroy(gameObject);
-            //stamina -= SwordMovement.attack;
-            //print(stamina);
-            //originalPos = gameObject.transform.position;
-            //gameObject.transform.position = SwordMovement.StartPoint;
-            //if (SwordMovement.attack == 1 )
-            //delay -= Time.deltaTime;
-            //if(delay <= 0)
-            //delay = 0;
-            //if (SwordMovement.attack == 2)
-            //    stamina -= 20;
-            //if (SwordMovement.attack == 3)
-            //    stamina -= 30;
+
+            health -= SwordMovement.attackDamage;
+            Debug.Log(health);
         }
-        if (stamina <= 0)
+        if (health <= 0)
         {
             Destroy(gameObject);
         }
