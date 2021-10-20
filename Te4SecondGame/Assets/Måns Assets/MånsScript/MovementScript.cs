@@ -5,6 +5,7 @@ using UnityEngine;
 public class MovementScript : MonoBehaviour
 {
     public CharacterController controller;
+    
     Vector3 direction;
     float turnSmoothlySpeed;
     float turnSmoothlyTime;
