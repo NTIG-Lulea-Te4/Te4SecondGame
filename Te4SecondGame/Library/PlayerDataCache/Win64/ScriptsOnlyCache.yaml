@@ -1,10 +1,8 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - JoinLobbyMenu
-    - MainMenu
+    - InGameMenu
     - MenuScript
-    - NetworkPlayerLobby
     - PlayerNameInput
     - PlayerScript
     Mirror.Components.dll:
@@ -17,11 +15,9 @@ ScriptsOnlyBuild:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
-    - TMPro.TMP_InputField
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
-    - TMPro.TextMeshProUGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -34,8 +30,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.InputField
-    - UnityEngine.UI.LayoutElement
-    - UnityEngine.UI.RectMask2D
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/William/Scenes/GameScene.unity:
@@ -76,7 +70,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2414}
     - Class: 114
-      Script: {instanceID: 3018}
+      Script: {instanceID: 2416}
+    - Class: 114
+      Script: {instanceID: 3022}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -133,10 +129,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1484}
     - Class: 114
-      Script: {instanceID: 1554}
-    - Class: 114
-      Script: {instanceID: 1642}
-    - Class: 114
       Script: {instanceID: 1780}
     - Class: 114
       Script: {instanceID: 2076}
@@ -145,39 +137,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2414}
     - Class: 114
-      Script: {instanceID: 2528}
+      Script: {instanceID: 2532}
     - Class: 114
-      Script: {instanceID: 2570}
+      Script: {instanceID: 2768}
     - Class: 114
-      Script: {instanceID: 2764}
+      Script: {instanceID: 2910}
     - Class: 114
-      Script: {instanceID: 2906}
+      Script: {instanceID: 2928}
     - Class: 114
-      Script: {instanceID: 2924}
+      Script: {instanceID: 3022}
     - Class: 114
-      Script: {instanceID: 3018}
+      Script: {instanceID: 3116}
     - Class: 114
-      Script: {instanceID: 3112}
+      Script: {instanceID: 3722}
     - Class: 114
-      Script: {instanceID: 3718}
+      Script: {instanceID: 3784}
     - Class: 114
-      Script: {instanceID: 3780}
+      Script: {instanceID: 4042}
     - Class: 114
-      Script: {instanceID: 3944}
+      Script: {instanceID: 4096}
     - Class: 114
-      Script: {instanceID: 4038}
+      Script: {instanceID: 4208}
     - Class: 114
-      Script: {instanceID: 4074}
+      Script: {instanceID: 4360}
     - Class: 114
-      Script: {instanceID: 4092}
-    - Class: 114
-      Script: {instanceID: 4204}
-    - Class: 114
-      Script: {instanceID: 4250}
-    - Class: 114
-      Script: {instanceID: 4356}
-    - Class: 114
-      Script: {instanceID: 4384}
+      Script: {instanceID: 4388}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -443,6 +427,12 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
+      Hash: 6b95c56e9dcc17cbabdef3278a4e6ce5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InGameMenu
+  - hash:
+      serializedVersion: 2
       Hash: f5763415ffcb37f6278091eb8b77a954
     assemblyName: SimpleWebTransport.dll
     namespaceName: Mirror.SimpleWeb
@@ -563,7 +553,7 @@ ScriptsOnlyBuild:
     className: AdditiveNetworkManager
   - hash:
       serializedVersion: 2
-      Hash: 43dbcbbfe89e6a6f6be123e344663a4f
+      Hash: 1c42d16d2407722a79f63b21df324079
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MenuScript
@@ -675,12 +665,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Outline
-  - hash:
-      serializedVersion: 2
-      Hash: 26f0e0a4506174903afb3a58fa2c92e4
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: NetworkManagerLobby
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -809,12 +793,6 @@ ScriptsOnlyBuild:
     className: ActivationTrack
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: NetworkPlayerLobby
-  - hash:
-      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -879,12 +857,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ControlTrack
-  - hash:
-      serializedVersion: 2
-      Hash: d6ab294b5411ef08432deb46b841f68b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: JoinLobbyMenu
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -975,12 +947,6 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.MultipleAdditiveScenes
     className: PhysicsCollision
-  - hash:
-      serializedVersion: 2
-      Hash: bdfa84ba76a76c1caa29069b5e535b2e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MainMenu
   - hash:
       serializedVersion: 2
       Hash: b26c6f4c6312e2952bbe7d0df1ea026e

@@ -22,9 +22,11 @@ public class PlayerNameInput : MonoBehaviour
     const string playerPrefsNameKey = "PlayerName";
 
     string nameCheck;
+    int maxNameLength;
 
     private void Start()
     {
+        maxNameLength = 12;
         SetUp();
     }
 
@@ -57,6 +59,7 @@ public class PlayerNameInput : MonoBehaviour
 
         confirmButton.interactable = !string.IsNullOrEmpty(isNameValid);
 
+        confirmButton.interactable = isNameValid.Length <= maxNameLength;
     }
 
     //Sparar det nya namnet spelaren skrev in i player prefs

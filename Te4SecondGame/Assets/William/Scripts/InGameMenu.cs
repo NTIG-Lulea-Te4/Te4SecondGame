@@ -1,47 +1,60 @@
+using Mirror;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InGameMenu : MonoBehaviour
 {
 
-
     [SerializeField]
     private GameObject inGameMenu;
 
+    [Scene]
+    public string mainMenuSceneName;
 
-    bool isEscapedPressed;
+
+    bool isMenuActive;
 
 
-    static public void OnExitClick()
-    {
-        Application.Quit();
-    }
 
     void Start()
     {
-        isEscapedPressed = false;
+        isMenuActive = false;
     }
 
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Escape))
+        // != ????
+        if (SceneManager.GetActiveScene().name != mainMenuSceneName)
         {
-            isEscapedPressed = !isEscapedPressed;
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                if (isMenuActive)
+                {
+                    inGameMenu.SetActive(false);
+                    isMenuActive = false;
+                }
+                else
+                {
+                    inGameMenu.SetActive(true);
+                    isMenuActive = true;
+                }
+            }
         }
 
-        if (isEscapedPressed)
-        {
-            inGameMenu.SetActive(true);
-
-        }
-        else if (!isEscapedPressed)
-        {
-            inGameMenu.SetActive(false);
-        }
+    }   
+    public void OnExitClick()
+    {
+        Application.Quit();
 
     }
 
+    public void OnReturnToMainMenuClick()
+    {
+        SceneManager.LoadScene(mainMenuSceneName);
 
+    }
 
 }

@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 5882395582157446126}
   - component: {fileID: 5825198042507834147}
   - component: {fileID: 1406697377612023618}
-  - component: {fileID: 1764931470777095456}
   - component: {fileID: -8071496739444573742}
   m_Layer: 0
   m_Name: CubeWithSword
@@ -146,18 +145,6 @@ MonoBehaviour:
   visible: 0
   m_AssetId: 000a4a2a881e1b34da874f8959a56d19
   hasSpawned: 0
---- !u!114 &1764931470777095456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4212290390198121956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b14c353504c85f342b17cfe27650e5aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-8071496739444573742
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -23,15 +23,16 @@ public class MenuScript : MonoBehaviour
     #endregion
 
 
+    public void OnHostOnlyButtonClick()
+    {
+        networkManager.StartServer();
+    }
 
-
-    public void OnHostButtonClick()
+    public void OnHostAndPlayButtonClick()
     {
         networkManager.StartHost();
 
     }
-
-    #region UI Panel on/off
 
     public void OnJoinAsClientClick()
     {
@@ -46,8 +47,6 @@ public class MenuScript : MonoBehaviour
         IpInputFieldPanel.SetActive(false);
 
     }
-
-    #endregion
 
     //Ger nätverks adressen ett nytt värde beroande på vad som skivs in i inputfield
     //Sedan connectar clienten med servern med nätverks adressen
