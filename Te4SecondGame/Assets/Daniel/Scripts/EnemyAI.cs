@@ -6,14 +6,14 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
     public float lookRadius = 10f;
-    Transform target;
+    GameObject target;
     NavMeshAgent agent;
     Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
-        target = PlayerManager.instance.player.transform;
+        target = GameObject.FindGameObjectWithTag("player");
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
     }
@@ -22,7 +22,7 @@ public class EnemyAI : MonoBehaviour
     void Update()
     {
         //Vector3 direction = transform.DirectionTo(target.position);
-        float distance = Vector3.Distance(target.position, transform.position);
+        float distance = Vector3.Distance(target.transform.position, transform.position);
         if (distance <= lookRadius)
         {
             if (distance <= agent.stoppingDistance)
@@ -30,7 +30,7 @@ public class EnemyAI : MonoBehaviour
                 FaceTarget();
                 
             }
-            agent.SetDestination(target.position);
+            agent.SetDestination(target.transform.position);
             animator.SetFloat("Speed", agent.velocity.magnitude);
             //LookToward(transform.position, distance);
             //Vector3 movement = transform.forward * Time.deltaTime * 1f;
@@ -40,7 +40,7 @@ public class EnemyAI : MonoBehaviour
 
     void FaceTarget()
     {
-        Vector3 direction = (target.position - transform.position).normalized;
+        Vector3 direction = (target.transform.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
         animator.SetFloat("Speed", 0f);

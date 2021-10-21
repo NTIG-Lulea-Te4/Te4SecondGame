@@ -7,6 +7,7 @@ TagManager:
   - Vertical Inner Wall
   - Horizontal Inner Wall
   - Outer Wall
+  - player
   layers:
   - Default
   - TransparentFX

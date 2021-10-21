@@ -5,26 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-<<<<<<< HEAD
-      ticks: 637696338536009292
-    m_Hash: 3531869884
-=======
-      ticks: 637702451839040391
-    m_Hash: 27312469
->>>>>>> origin/Abdula-second
+      ticks: 637704106461092006
+    m_Hash: 1114122004
   m_LockFileStatus:
     m_FilePath: C:/Users/Daniel.ibrahimi/Documents/Unity Game Engin/Te4SecondGame/Te4SecondGame/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-<<<<<<< HEAD
-      ticks: 637696338536009292
-    m_Hash: 51398154
-=======
-      ticks: 637702451839100207
-    m_Hash: 2354833136
->>>>>>> origin/Abdula-second
+      ticks: 637704106461092006
+    m_Hash: 714406717
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -413,7 +403,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.2
       source: 1
-      resolvedPath: C:\Users\abdula.fazeli\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.quicksearch@2.0.2
+      resolvedPath: C:\Users\Daniel.ibrahimi\Documents\Unity Game Engin\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.quicksearch@2.0.2
       assetPath: Packages/com.unity.quicksearch
       name: com.unity.quicksearch
       displayName: Quick Search

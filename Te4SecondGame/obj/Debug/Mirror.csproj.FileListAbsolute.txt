@@ -1,1 +1,2 @@
 C:\Users\Daniel.ibrahimi\Documents\Unity Game Engin\Te4SecondGame\Te4SecondGame\obj\Debug\Mirror.csproj.CoreCompileInputs.cache
+C:\Users\Daniel.ibrahimi\Documents\Unity Game Engin\Te4SecondGame\Te4SecondGame\obj\Debug\Mirror.csproj.AssemblyReference.cache
