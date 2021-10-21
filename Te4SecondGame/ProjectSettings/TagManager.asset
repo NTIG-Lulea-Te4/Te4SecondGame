@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - weapon
+  - Vertical Inner Wall
+  - Horizontal Inner Wall
+  - Outer Wall
+  - Trap
   layers:
   - Default
   - TransparentFX

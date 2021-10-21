@@ -31,10 +31,6 @@ public class SwordMovement : MonoBehaviour
             attackDamage = 30;
             transform.RotateAround(target.transform.position, new Vector3(0, 0, attackDamage), speed * Time.deltaTime);
         }
-        else
-        {
-            attackDamage = 20;
-        }
     }
 
     void Update()
