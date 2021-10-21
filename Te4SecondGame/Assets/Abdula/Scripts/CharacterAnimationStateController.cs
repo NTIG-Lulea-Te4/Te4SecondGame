@@ -5,45 +5,55 @@ using UnityEngine;
 public class CharacterAnimationStateController : MonoBehaviour
 {
     Animator animator;
-    bool isWalking;
-    bool forwardPressed;
+    float velocity;
+    int velocityHash;
 
+    [SerializeField]
+    private float acceleration;
 
+    [SerializeField]
+    private float deceleration;
 
     public CharacterAnimationStateController()
     {
-       //isWalking = animator.GetBool("isWalking");
-       //forwardPressed = Input.GetKey("W");
-    }
+        velocity = 0.0f;
 
+        acceleration = 3.5f;
+        deceleration = 4.0f;
+    }
 
     void Start()
     {
         animator = GetComponent<Animator>();
-    }
 
+        velocityHash = Animator.StringToHash("Velocity");
+    }
 
     void Update()
     {
-        if (Input.GetKeyDown("w"))
+        bool forwardPressed = Input.GetKey("w");
+        bool runPressed = Input.GetKey("left shift");
+
+        if (forwardPressed && velocity < 1.0f)
         {
-            animator.SetBool("isWalking", true);
-        }
-        
-        if (Input.GetKeyUp("w"))
-        {
-            animator.SetBool("isWalking", false);
+            velocity += Time.deltaTime * acceleration;
         }
 
+        if (!forwardPressed && velocity > 0.0f)
+        {
+            velocity -= Time.deltaTime * deceleration;
+        }
 
-        //if (Input.GetKeyDown("Left Shift"))
-        //{
-        //    animator.SetBool("isRunning", true);
-        //}
+        if (!forwardPressed && velocity < 0.0f)
+        {
+            velocity = 0.0f;
+        }
 
-        //if (Input.GetKeyUp("Left Shift"))
+        animator.SetFloat(velocityHash, velocity);
+
+        //if (runPressed)
         //{
-        //    animator.SetBool("isRunning", false);
+        //    velocity += Time.deltaTime * acceleration;
         //}
     }
 }

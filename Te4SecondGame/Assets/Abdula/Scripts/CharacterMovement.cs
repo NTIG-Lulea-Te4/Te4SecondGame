@@ -127,8 +127,8 @@ public class CharacterMovement : NetworkBehaviour
 
             if (Input.GetKey(leftShift))
             {
-                Vector3 runiningVelocity = (transform.forward * currentDirection.y + transform.right * currentDirection.x) * runSpeed + (new Vector3(0, 1, 0) * velocityY);
-                characterController.Move(runiningVelocity * Time.deltaTime);
+                Vector3 runniningVelocity = (transform.forward * currentDirection.y + transform.right * currentDirection.x) * runSpeed + (new Vector3(0, 1, 0) * velocityY);
+                characterController.Move(runniningVelocity * Time.deltaTime);
             }
             
         }
