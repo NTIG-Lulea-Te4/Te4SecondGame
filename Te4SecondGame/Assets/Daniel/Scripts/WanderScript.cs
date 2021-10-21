@@ -41,6 +41,8 @@ public class WanderScript : MonoBehaviour
             transform.position += transform.forward  *Time.deltaTime * velocity;
         }
     }
+
+
     IEnumerator Wander()
     {
         int rotateTime = Random.Range(1, 3);
