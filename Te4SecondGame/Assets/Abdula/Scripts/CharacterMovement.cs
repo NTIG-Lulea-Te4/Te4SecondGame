@@ -5,13 +5,14 @@ using Mirror;
 
 public class CharacterMovement : NetworkBehaviour
 {
+    #region Variable
     CharacterController characterController;
 
-    [SerializeField]
-    Transform playerFirstPersonCamera;
+    //[SerializeField]
+    //Transform playerFirstPersonCamera;
 
-    [SerializeField]
-    bool lockCursor;
+    //[SerializeField]
+    //bool lockCursor;
 
     [SerializeField]
     float walkSpeed;
@@ -23,6 +24,15 @@ public class CharacterMovement : NetworkBehaviour
     float gravity;
 
     [SerializeField]
+    private AnimationCurve jumpFallOff;
+
+    [SerializeField]
+    float jumpMultiplier;
+
+    [SerializeField]
+    KeyCode jumpKey;
+
+    [SerializeField]
     KeyCode leftShift;
 
     [SerializeField]
@@ -31,27 +41,31 @@ public class CharacterMovement : NetworkBehaviour
     Vector2 currentDirection;
     Vector2 currentDirectionVelocity;
 
-    [SerializeField]
-    float mouseSensitivity;
-    [SerializeField]
-    [Range(0.0f, 0.5f)]
-    float mouseSmoothTime;
-    Vector2 currentMouseDelta;
-    Vector2 currentMouseDeltaVelocity;
+    //[SerializeField]
+    //float mouseSensitivity;
+    //[SerializeField]
+    //[Range(0.0f, 0.5f)]
+    //float mouseSmoothTime;
+    //Vector2 currentMouseDelta;
+    //Vector2 currentMouseDeltaVelocity;
 
-    float cameraPitch;
+    //float cameraPitch;
     float velocityY;
 
+    bool isJumping;
 
+    #endregion
+
+    #region Constructor
     public CharacterMovement()
     {
-        playerFirstPersonCamera = null;
+        //playerFirstPersonCamera = null;
 
         characterController = null;
 
-        cameraPitch = 0.0f;
+        //cameraPitch = 0.0f;
 
-        lockCursor = true;
+        //lockCursor = true;
 
         walkSpeed = 3.0f;
         runSpeed = 4.5f;
@@ -61,50 +75,54 @@ public class CharacterMovement : NetworkBehaviour
         currentDirection = Vector2.zero;
         currentDirectionVelocity = Vector2.zero;
 
-        mouseSensitivity = 3.5f;
-        mouseSmoothTime = 0.03f;
+        //mouseSensitivity = 3.5f;
+        //mouseSmoothTime = 0.03f;
 
-        currentMouseDelta = Vector2.zero;
-        currentMouseDeltaVelocity = Vector2.zero;
+        //currentMouseDelta = Vector2.zero;
+        //currentMouseDeltaVelocity = Vector2.zero;
 
         gravity = -13.0f;
         velocityY = 0.0f;
+
         //mouseDelta = new Vector2(Input.GetAxis("Mouse X"),
         //Input.GetAxis("Mouse Y")); Unity does not allow to call GetAxis outside Start or Awake seperately,
         //it works if you define and call it in one method though
     }
 
+    #endregion
+
     void Start()
     {
         characterController = GetComponent<CharacterController>();
-        if (lockCursor)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
+        //if (lockCursor)
+        //{
+        //    Cursor.lockState = CursorLockMode.Locked;
+        //    Cursor.visible = false;
+        //}
     }
 
     void Update()
     {
-        UpdateMouseLook();
+        //UpdateMouseLook();
         UpdateMovement();
+        JumpInput();
     }
 
-    void UpdateMouseLook()
-    {
-        if (isLocalPlayer)
-        {
-            Vector2 targetMouseDelta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+    //void UpdateMouseLook()
+    //{
+    //    if (isLocalPlayer)
+    //    {
+    //        Vector2 targetMouseDelta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
 
-            currentMouseDelta = Vector2.SmoothDamp(currentMouseDelta, targetMouseDelta, ref currentMouseDeltaVelocity, mouseSmoothTime);
+    //        currentMouseDelta = Vector2.SmoothDamp(currentMouseDelta, targetMouseDelta, ref currentMouseDeltaVelocity, mouseSmoothTime);
 
-            cameraPitch -= currentMouseDelta.y * mouseSensitivity;    // using -= instead of +=, inverts the Y-axis's negative and positive to align with Camera's
-            cameraPitch = Mathf.Clamp(cameraPitch, -50.0f, 50.0f);
+    //        cameraPitch -= currentMouseDelta.y * mouseSensitivity;    // using -= instead of +=, inverts the Y-axis's negative and positive to align with Camera's
+    //        cameraPitch = Mathf.Clamp(cameraPitch, -50.0f, 50.0f);
 
-            playerFirstPersonCamera.localEulerAngles = new Vector3(1, 0, 0) * cameraPitch;
-            transform.Rotate(new Vector3(0, 1, 0) * currentMouseDelta.x * mouseSensitivity);
-        }
-    }
+    //        playerFirstPersonCamera.localEulerAngles = new Vector3(1, 0, 0) * cameraPitch;
+    //        transform.Rotate(new Vector3(0, 1, 0) * currentMouseDelta.x * mouseSensitivity);
+    //    }
+    //}
 
     void UpdateMovement()
     {
@@ -132,5 +150,32 @@ public class CharacterMovement : NetworkBehaviour
             }
             
         }
+    }
+
+    void JumpInput()
+    {
+        if (Input.GetKeyDown(jumpKey) && !isJumping)
+        {
+            isJumping = true;
+            StartCoroutine(JumpEvent());
+        }
+    }
+
+    IEnumerator JumpEvent()
+    {
+        characterController.slopeLimit = 90.0f;
+        float timeInAir = 0.0f;
+
+        do
+        {
+            float jumpForce = jumpFallOff.Evaluate(timeInAir);
+            characterController.Move(new Vector3(0, 1, 0) * jumpForce * jumpMultiplier * Time.deltaTime);
+            timeInAir += Time.deltaTime;
+            yield return null;
+        } 
+        while (!characterController.isGrounded && characterController.collisionFlags != CollisionFlags.Above);
+
+        characterController.slopeLimit = 45.0f;
+        isJumping = false;
     }
 }

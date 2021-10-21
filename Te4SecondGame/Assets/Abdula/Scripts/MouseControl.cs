@@ -13,16 +13,16 @@ public class MouseControl : NetworkBehaviour
     [SerializeField]
     bool lockCursor;
 
-    [SerializeField]
-    float walkSpeed;
+    //[SerializeField]
+    //float walkSpeed;
 
-    [SerializeField]
-    float gravity;
+    //[SerializeField]
+    //float gravity;
 
-    [SerializeField] [Range(0.0f, 0.5f)] //range slider: works the same as Mathf.Clamp ish
-    float moveSmoothTime;
-    Vector2 currentDirection;
-    Vector2 currentDirectionVelocity;
+    //[SerializeField] [Range(0.0f, 0.5f)] //range slider: works the same as Mathf.Clamp ish
+    //float moveSmoothTime;
+    //Vector2 currentDirection;
+    //Vector2 currentDirectionVelocity;
 
     [SerializeField]
     float mouseSensitivity;
@@ -32,7 +32,7 @@ public class MouseControl : NetworkBehaviour
     Vector2 currentMouseDeltaVelocity;
 
     float cameraPitch;
-    float velocityY;
+    //float velocityY;
 
 
     public MouseControl()
@@ -45,12 +45,12 @@ public class MouseControl : NetworkBehaviour
 
         lockCursor = true;
 
-        walkSpeed = 3.0f;
+        //walkSpeed = 3.0f;
 
-        moveSmoothTime = 0.3f;
+        //moveSmoothTime = 0.3f;
 
-        currentDirection = Vector2.zero;
-        currentDirectionVelocity = Vector2.zero;
+        //currentDirection = Vector2.zero;
+        //currentDirectionVelocity = Vector2.zero;
 
         mouseSensitivity = 3.5f;
         mouseSmoothTime = 0.03f;
@@ -58,8 +58,9 @@ public class MouseControl : NetworkBehaviour
         currentMouseDelta = Vector2.zero;
         currentMouseDeltaVelocity = Vector2.zero;
 
-        gravity = -13.0f;
-        velocityY = 0.0f;
+        //gravity = -13.0f;
+        //velocityY = 0.0f;
+
         //mouseDelta = new Vector2(Input.GetAxis("Mouse X"),
         //Input.GetAxis("Mouse Y")); Unity does not allow to call GetAxis outside Start or Awake seperately,
         //it works if you define and call it in one method though
@@ -79,7 +80,7 @@ public class MouseControl : NetworkBehaviour
     void Update()
     {
         UpdateMouseLook();
-        UpdateMovement();
+        //UpdateMovement();
     }
 
     void UpdateMouseLook()
@@ -95,21 +96,21 @@ public class MouseControl : NetworkBehaviour
         transform.Rotate(new Vector3(0, 1, 0) * currentMouseDelta.x * mouseSensitivity);
     }
 
-    void UpdateMovement()
-    {
-        Vector2 targetDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        targetDirection.Normalize();  //Normalize diagonal vectors to same length as other vectors
+    //void UpdateMovement()
+    //{
+    //    Vector2 targetDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+    //    targetDirection.Normalize();  //Normalize diagonal vectors to same length as other vectors
 
-        currentDirection = Vector2.SmoothDamp(currentDirection, targetDirection, ref currentDirectionVelocity, moveSmoothTime);
+    //    currentDirection = Vector2.SmoothDamp(currentDirection, targetDirection, ref currentDirectionVelocity, moveSmoothTime);
 
-        if (characterController.isGrounded)
-        {
-            velocityY = 0.0f;
-        }
-        velocityY += gravity * Time.deltaTime;
+    //    if (characterController.isGrounded)
+    //    {
+    //        velocityY = 0.0f;
+    //    }
+    //    velocityY += gravity * Time.deltaTime;
 
-        Vector3 velocity = (transform.forward * currentDirection.y + transform.right * currentDirection.x) * walkSpeed + (new Vector3(0, 1, 0) * velocityY);  //Vector3.up is positive and gravity negative
+    //    Vector3 velocity = (transform.forward * currentDirection.y + transform.right * currentDirection.x) * walkSpeed + (new Vector3(0, 1, 0) * velocityY);  //Vector3.up is positive and gravity negative
 
-        characterController.Move(velocity * Time.deltaTime);
-    }
+    //    characterController.Move(velocity * Time.deltaTime);
+    //}
 }

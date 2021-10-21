@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 278272907632418337}
   - component: {fileID: 7658351366970182849}
   - component: {fileID: 2616300567466736087}
-  - component: {fileID: 1001583375812327983}
   - component: {fileID: 5545412131806223390}
+  - component: {fileID: 5280076580242817591}
   m_Layer: 0
   m_Name: First Person Player
   m_TagString: Untagged
@@ -136,29 +136,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1001583375812327983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 633258588722418104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bfbf4fcf03a42645a16277d8e593169, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  playerFirstPersonCamera: {fileID: 7040965858708757304}
-  lockCursor: 1
-  walkSpeed: 3
-  runSpeed: 4.5
-  gravity: -13
-  leftShift: 304
-  moveSmoothTime: 0.2
-  mouseSensitivity: 3.5
-  mouseSmoothTime: 0.03
 --- !u!114 &5545412131806223390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,6 +148,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c90d33301590c94a940b47ade3781fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5280076580242817591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633258588722418104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c81ae5af87a4dce47945d03147910668, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  playerFirstPersonCamera: {fileID: 7040965858708757304}
+  lockCursor: 1
+  walkSpeed: 3
+  runSpeed: 4.5
+  gravity: -9
+  jumpFallOff:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.7020874
+      value: 0.0014953613
+      inSlope: -0.5263067
+      outSlope: -0.5263067
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.4773812
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  jumpMultiplier: 7
+  jumpKey: 32
+  leftShift: 304
+  moveSmoothTime: 0.3
+  mouseSensitivity: 3.5
+  mouseSmoothTime: 0.03
 --- !u!1 &7870864376945835263
 GameObject:
   m_ObjectHideFlags: 0
