@@ -70,7 +70,15 @@ public class SQLiteSimple : MonoBehaviour
             using (SqliteCommand command = connection.CreateCommand())
             {
                 command.CommandText = "SELECT * FROM score;";
-                command.ExecuteNonQuery();
+                using (IDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Debug.Log( "\n" + "name" + reader["name"] + "score" + reader["score"]);
+
+                    }
+
+                }
             }
 
             connection.Close();
