@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Vertical Inner Wall
+  - Horizontal Inner Wall
+  - Outer Wall
   layers:
   - Default
   - TransparentFX

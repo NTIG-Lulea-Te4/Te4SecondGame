@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Daniel/Scenes/MultiplayerBase.unity
+=======
+- path: Assets/Abdula/Scenes/NetworkOnlineScene.unity
+>>>>>>> main
   isLoaded: 1
   isActive: 1
   isSubScene: 0
