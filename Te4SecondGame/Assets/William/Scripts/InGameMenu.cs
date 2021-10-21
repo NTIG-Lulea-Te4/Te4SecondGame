@@ -4,18 +4,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class InGameMenu : MonoBehaviour
+public class InGameMenu : NetworkBehaviour
 {
 
     [SerializeField]
-    private GameObject inGameMenu;
+    private GameObject inGameMenuPanel;
 
     [Scene]
     public string mainMenuSceneName;
 
-
     bool isMenuActive;
 
+    private void Awake()
+    {
+
+    }
 
 
     void Start()
@@ -25,26 +28,25 @@ public class InGameMenu : MonoBehaviour
 
     void Update()
     {
-        // != ????
-        if (SceneManager.GetActiveScene().name != mainMenuSceneName)
+        if (SceneManager.GetActiveScene() != SceneManager.GetSceneByName(mainMenuSceneName))
         {
 
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 if (isMenuActive)
                 {
-                    inGameMenu.SetActive(false);
+                    inGameMenuPanel.SetActive(false);
                     isMenuActive = false;
                 }
                 else
                 {
-                    inGameMenu.SetActive(true);
+                    inGameMenuPanel.SetActive(true);
                     isMenuActive = true;
                 }
             }
-        }
 
-    }   
+        }
+    }
     public void OnExitClick()
     {
         Application.Quit();
@@ -54,6 +56,7 @@ public class InGameMenu : MonoBehaviour
     public void OnReturnToMainMenuClick()
     {
         SceneManager.LoadScene(mainMenuSceneName);
+        //inGameMenuCanvas.SetActive(false);
 
     }
 

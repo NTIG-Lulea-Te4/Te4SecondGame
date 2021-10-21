@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
@@ -19,19 +20,31 @@ public class MenuScript : MonoBehaviour
     [SerializeField]
     private InputField inputFieldForIpAdress;
 
-
     #endregion
 
+    private void Start()
+    {
+        //inGameMenuCanvas.SetActive(false);
+    }
+
+    private void Update()
+    {
+
+    }
 
     public void OnHostOnlyButtonClick()
     {
         networkManager.StartServer();
+
+        //inGameMenuCanvas.SetActive(true);
     }
 
     public void OnHostAndPlayButtonClick()
     {
         networkManager.StartHost();
 
+       // inGameMenuCanvas.SetActive(true);
+        Debug.Log("Hosting game...");
     }
 
     public void OnJoinAsClientClick()
@@ -57,17 +70,13 @@ public class MenuScript : MonoBehaviour
         networkManager.networkAddress = ipAdress;
         networkManager.StartClient();
 
-
+       // inGameMenuCanvas.SetActive(true);
     }
 
     static public void OnExitClick()
     {
         Application.Quit();
-    }
-
-    static public void OnMainMenuClick()
-    {
-
+        Debug.Log("Quitting game...");
     }
 
     

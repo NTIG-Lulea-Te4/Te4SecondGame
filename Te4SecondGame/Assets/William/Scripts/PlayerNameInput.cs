@@ -24,7 +24,7 @@ public class PlayerNameInput : MonoBehaviour
     string nameCheck;
     int maxNameLength;
 
-    private void Start()
+    private void Awake()
     {
         maxNameLength = 12;
         SetUp();
