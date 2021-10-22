@@ -22,21 +22,21 @@ public class Trap : MonoBehaviour
             //Destroy(gameObject);
 
             //trapdmg = 20;
-            die();
+            Die();
 
         }
         //trapheal -= trapdmg;
         //Debug.Log(trapheal);
     }
 
-    void die()
+    void Die()
     {
         Destroy(gameObject);
         Debug.Log("Ouchhh");
     }
     void Update()
     {
-        die();
+        Die();
         
     }
 }

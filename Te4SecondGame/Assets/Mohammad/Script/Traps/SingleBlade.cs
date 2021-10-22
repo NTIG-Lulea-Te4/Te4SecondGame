@@ -10,21 +10,21 @@ public class SingleBlade : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            OnDisable();
+            ActivateTrap();
         }
     }
     void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            OnEnable();
+            DeActivateTrap();
         }
     }
-    public void OnDisable()
+    public void ActivateTrap()
     {
         SingleBladeActivating.SetActive(true);
     }
-    public void OnEnable()
+    public void DeActivateTrap()
     {
         SingleBladeActivating.SetActive(false);
     }
