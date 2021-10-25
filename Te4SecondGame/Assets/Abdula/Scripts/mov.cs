@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Mirror;
 
-public class mov : NetworkBehaviour
+public class mov : MonoBehaviour
 {
 
     public float speed;
@@ -11,8 +10,7 @@ public class mov : NetworkBehaviour
 
     void Movement()
     {
-        if (isLocalPlayer)
-        {
+
             if (Input.GetKey(KeyCode.W))
             {
                 transform.Translate(new Vector3(0, 0, 1) * speed * Time.deltaTime);
@@ -29,7 +27,7 @@ public class mov : NetworkBehaviour
             {
                 transform.Translate(new Vector3(1, 0, 0) * speed * Time.deltaTime);
             }
-        }
+        
     }
 
     void Update()

@@ -6,41 +6,25 @@ using Mirror;
 public class Health : NetworkBehaviour
 {
     public static int health = 100;
-    private int dmg;
-    //public Effect instance;
-    //public SwordMovement swordMovement;
 
+    //void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.tag.Equals("Trap"))
+    //    {
+
+    //        Health.health -= Trapsdmg.trapDamage;
+    //        Debug.Log(Health.health);
+    //    }
+    //}
     void OnCollisionEnter(Collision collision)
     {
-        if (isLocalPlayer)
+        if (collision.gameObject.tag.Equals("Trap"))
         {
-            if (collision.gameObject.tag.Equals("weapon"))
-            //if (collision.collider.tag == "weapon")
-            {
-                dmg = SwordMovement.attackDamage;
-
-                //if (isLocalPlayer)
-                //{
-                //    if (Input.GetKey(KeyCode.E))
-                //    {
-                //        dmg = 0;
-                //    }
-                //    else
-                //    {
-                health -= dmg;
-                //health -= SwordMovement.attackDamage;
-                Debug.Log(health);
-                //transform.position = swordMovement.StartPosition();
-                //originalPos = gameObject.transform.position;
-                //gameObject.transform.position = SwordMovement.StartPoint;
-                //}
-            }
+           
         }
-
-    
-
-
+        Debug.Log("Trap");
     }
+
     void Update()
     {
         if (health <= 0)

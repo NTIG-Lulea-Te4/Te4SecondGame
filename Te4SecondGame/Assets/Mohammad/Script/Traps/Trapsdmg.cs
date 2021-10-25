@@ -12,6 +12,7 @@ public class Trapsdmg : MonoBehaviour
             Health.health -= trapDamage;
             Debug.Log(Health.health);
         }
+        Debug.Log("tasd");
     }
 
 }
