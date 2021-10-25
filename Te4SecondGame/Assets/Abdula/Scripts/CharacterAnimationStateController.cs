@@ -5,15 +5,12 @@ using UnityEngine;
 public class CharacterAnimationStateController : MonoBehaviour
 {
     Animator animator;
-    bool isWalking;
-    bool forwardPressed;
-
-
+    //bool isWalking;
+    //bool forwardPressed;
 
     public CharacterAnimationStateController()
     {
-       //isWalking = animator.GetBool("isWalking");
-       //forwardPressed = Input.GetKey("W");
+
     }
 
 
@@ -22,28 +19,22 @@ public class CharacterAnimationStateController : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-
     void Update()
     {
-        if (Input.GetKeyDown("w"))
-        {
-            animator.SetBool("isWalking", true);
-        }
-        
-        if (Input.GetKeyUp("w"))
-        {
-            animator.SetBool("isWalking", false);
-        }
-
-
-        //if (Input.GetKeyDown("Left Shift"))
+        #region old if condition
+        //if (Input.GetKeyDown("w"))
         //{
-        //    animator.SetBool("isRunning", true);
+        //    animator.SetBool("isWalking", true);
         //}
 
-        //if (Input.GetKeyUp("Left Shift"))
+        //if (Input.GetKeyUp("w"))
         //{
-        //    animator.SetBool("isRunning", false);
+        //    animator.SetBool("isWalking", false);
         //}
+        #endregion
+
+        animator.SetBool("isWalking", Input.GetKey("w"));
+        animator.SetBool("isRunning", (Input.GetKey("left shift") && Input.GetKey("w")));
+        animator.SetBool("isAttacking", Input.GetKey("mouse 0"));
     }
 }

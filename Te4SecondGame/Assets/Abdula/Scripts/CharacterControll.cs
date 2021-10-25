@@ -69,6 +69,8 @@ public class CharacterControll : NetworkBehaviour
         walkSpeed = 3.0f;
         runSpeed = 4.5f;
 
+        jumpMultiplier = 9.5f;
+
         moveSmoothTime = 0.3f;
 
         currentDirection = Vector2.zero;
@@ -82,10 +84,6 @@ public class CharacterControll : NetworkBehaviour
 
         gravity = -13.0f;
         velocityY = 0.0f;
-
-        //mouseDelta = new Vector2(Input.GetAxis("Mouse X"),
-        //Input.GetAxis("Mouse Y")); Unity does not allow to call GetAxis outside Start or Awake seperately,
-        //it works if you define and call it in one method though
     }
 
     void Start()
@@ -111,7 +109,8 @@ public class CharacterControll : NetworkBehaviour
         {
             Vector2 targetMouseDelta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
 
-            currentMouseDelta = Vector2.SmoothDamp(currentMouseDelta, targetMouseDelta, ref currentMouseDeltaVelocity, mouseSmoothTime);
+            currentMouseDelta = Vector2.SmoothDamp
+                (currentMouseDelta, targetMouseDelta, ref currentMouseDeltaVelocity, mouseSmoothTime);
 
             cameraPitch -= currentMouseDelta.y * mouseSensitivity;    // using -= instead of +=, inverts the Y-axis's negative and positive to align with Camera's
             cameraPitch = Mathf.Clamp(cameraPitch, -50.0f, 50.0f);
@@ -128,7 +127,8 @@ public class CharacterControll : NetworkBehaviour
             Vector2 targetDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
             targetDirection.Normalize();  //Normalize diagonal vectors to same length as other vectors
 
-            currentDirection = Vector2.SmoothDamp(currentDirection, targetDirection, ref currentDirectionVelocity, moveSmoothTime);
+            currentDirection = Vector2.SmoothDamp
+                (currentDirection, targetDirection, ref currentDirectionVelocity, moveSmoothTime);
 
             if (characterController.isGrounded)
             {
@@ -136,16 +136,17 @@ public class CharacterControll : NetworkBehaviour
             }
             velocityY += gravity * Time.deltaTime;
 
-            Vector3 velocity = (transform.forward * currentDirection.y + transform.right * currentDirection.x) * walkSpeed + (new Vector3(0, 1, 0) * velocityY);  //Vector3.up is positive and gravity negative
+            Vector3 velocity = (transform.forward * currentDirection.y + transform.right * currentDirection.x)
+                * walkSpeed + (new Vector3(0, 1, 0) * velocityY);  //Vector3.up is positive and gravity negative
 
             characterController.Move(velocity * Time.deltaTime);
 
             if (Input.GetKey(leftShift))
             {
-                Vector3 runiningVelocity = (transform.forward * currentDirection.y + transform.right * currentDirection.x) * runSpeed + (new Vector3(0, 1, 0) * velocityY);
+                Vector3 runiningVelocity = (transform.forward * currentDirection.y + transform.right * currentDirection.x) 
+                    * runSpeed + (new Vector3(0, 1, 0) * velocityY);
                 characterController.Move(runiningVelocity * Time.deltaTime);
             }
-
         }
     }
 

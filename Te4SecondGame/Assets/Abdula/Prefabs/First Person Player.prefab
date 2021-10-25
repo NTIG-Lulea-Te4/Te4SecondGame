@@ -191,7 +191,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  jumpMultiplier: 7
+  jumpMultiplier: 9.5
   jumpKey: 32
   leftShift: 304
   moveSmoothTime: 0.3
