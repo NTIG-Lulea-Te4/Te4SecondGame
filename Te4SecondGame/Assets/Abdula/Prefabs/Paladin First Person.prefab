@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 278272907632418337}
   - component: {fileID: 7658351366970182849}
   - component: {fileID: 2616300567466736087}
-  - component: {fileID: 5545412131806223390}
+  - component: {fileID: 866557186057561924}
   - component: {fileID: 5280076580242817591}
   m_Layer: 0
   m_Name: Paladin First Person
@@ -126,7 +126,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 633258588722418104}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: ba24e610e0a338545b447ff44a3cf1cc, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 595c179fa59496343a664852a5657a40, type: 3}
   m_Controller: {fileID: 9100000, guid: 28b501a13247b9341ac3a4367ccfee5b, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 1
@@ -136,7 +136,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5545412131806223390
+--- !u!114 &866557186057561924
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 633258588722418104}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c90d33301590c94a940b47ade3781fa, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ae5bb994411adb45961a7935395021f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &5280076580242817591
@@ -197,6 +197,25 @@ MonoBehaviour:
   moveSmoothTime: 0.3
   mouseSensitivity: 3.5
   mouseSmoothTime: 0.03
+--- !u!95 &2888972635972219167
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7688045260079242655}
+  m_Enabled: 0
+  m_Avatar: {fileID: 9000000, guid: 595c179fa59496343a664852a5657a40, type: 3}
+  m_Controller: {fileID: 9100000, guid: 28b501a13247b9341ac3a4367ccfee5b, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 1
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7870864376945835263
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,6 +356,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dec7a4a437a629a4f8fcc0a07a49a3cc, type: 3}
+--- !u!1 &7688045260079242655 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4295213199710787305, guid: dec7a4a437a629a4f8fcc0a07a49a3cc, type: 3}
+  m_PrefabInstance: {fileID: 5848704544773671798}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7060162910530979621 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3517444390448843859, guid: dec7a4a437a629a4f8fcc0a07a49a3cc, type: 3}
