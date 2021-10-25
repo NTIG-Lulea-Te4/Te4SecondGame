@@ -12,29 +12,33 @@ public class Health : NetworkBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag.Equals("weapon"))
-        //if (collision.collider.tag == "weapon")
+        if (isLocalPlayer)
         {
-            dmg = SwordMovement.attackDamage;
-
-            if (isLocalPlayer)
+            if (collision.gameObject.tag.Equals("weapon"))
+            //if (collision.collider.tag == "weapon")
             {
-                if (Input.GetKey(KeyCode.E))
-                {
-                    dmg = 0;
-                }
-                else
-                {
-                    health -= dmg;
-                    //health -= SwordMovement.attackDamage;
-                    Debug.Log(health);
-                    //transform.position = swordMovement.StartPosition();
-                    //originalPos = gameObject.transform.position;
-                    //gameObject.transform.position = SwordMovement.StartPoint;
-                }
-            }
+                dmg = SwordMovement.attackDamage;
 
+                //if (isLocalPlayer)
+                //{
+                //    if (Input.GetKey(KeyCode.E))
+                //    {
+                //        dmg = 0;
+                //    }
+                //    else
+                //    {
+                health -= dmg;
+                //health -= SwordMovement.attackDamage;
+                Debug.Log(health);
+                //transform.position = swordMovement.StartPosition();
+                //originalPos = gameObject.transform.position;
+                //gameObject.transform.position = SwordMovement.StartPoint;
+                //}
+            }
         }
+
+    
+
 
     }
     void Update()
