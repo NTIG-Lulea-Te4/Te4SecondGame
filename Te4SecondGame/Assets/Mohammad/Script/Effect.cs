@@ -17,6 +17,15 @@ public class Effect : MonoBehaviour
             Instantiate(blood, transform.position, transform.rotation);
             damageText.text = SwordMovement.attackDamage.ToString();
             Instantiate(damageText, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), transform.rotation);
+            
+        }
+        if (collision.gameObject.tag.Equals("Trap"))
+        //if (collision.collider.tag == "weapon")
+        {
+            Instantiate(blood, transform.position, transform.rotation);
+            damageText.text = Trapsdmg.trapDamage.ToString();
+            Instantiate(damageText, new Vector3(transform.position.x + 3, transform.position.y, transform.position.z), transform.rotation);
+            
         }
 
     }

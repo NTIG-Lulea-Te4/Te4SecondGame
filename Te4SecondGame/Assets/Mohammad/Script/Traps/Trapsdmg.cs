@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Trapsdmg : MonoBehaviour
 {
-    public GameObject blood;
+    public static int trapDamage = 20;
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag.Equals("Player"))
         {
-            Health.health -= 20;
+            Health.health -= trapDamage;
             Debug.Log(Health.health);
-            Instantiate(blood, transform.position, transform.rotation);
-
         }
     }
 
