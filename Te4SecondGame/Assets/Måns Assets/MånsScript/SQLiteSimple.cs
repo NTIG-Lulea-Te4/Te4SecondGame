@@ -5,29 +5,42 @@ using UnityEngine;
 
 public class SQLiteSimple : MonoBehaviour
 {
-    private string databaseName;
+    private string scoreboardDatabase;
     // Start is called before the first frame update
+
+    #region getsetters
+    public string ScoreboardDatabase
+    {
+
+        get
+        {
+            return scoreboardDatabase;
+        }
+
+    }
+
+    #endregion
     void Start()
     {
-        databaseName = "URI=file:Scoreboard.db";
+        scoreboardDatabase = "URI=file:Scoreboard.db";
         CreateDB();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    public void CreateDB() 
-    { 
-    
-        
-        using (SqliteConnection connection = new SqliteConnection(databaseName)) 
+    public void CreateDB()
+    {
+
+
+        using (SqliteConnection connection = new SqliteConnection(scoreboardDatabase))
         {
             connection.Open();
 
-            using (SqliteCommand command = connection.CreateCommand()) 
+            using (SqliteCommand command = connection.CreateCommand())
             {
                 command.CommandText = "CREATE TABLE IF NOT EXISTS scores (name STRING, score INT);";
                 command.ExecuteNonQuery();
@@ -35,14 +48,14 @@ public class SQLiteSimple : MonoBehaviour
 
             connection.Close();
         }
-        
-    
+
+
     }
 
-    public void AddScore(string name, int score) 
+    public void AddScore(string name, int score)
     {
 
-        using (SqliteConnection connection = new SqliteConnection(databaseName))
+        using (SqliteConnection connection = new SqliteConnection(scoreboardDatabase))
         {
             connection.Open();
 
@@ -63,18 +76,18 @@ public class SQLiteSimple : MonoBehaviour
     {
 
 
-        using (SqliteConnection connection = new SqliteConnection(databaseName))
+        using (SqliteConnection connection = new SqliteConnection(scoreboardDatabase))
         {
             connection.Open();
 
             using (SqliteCommand command = connection.CreateCommand())
             {
                 command.CommandText = "SELECT * FROM score;";
-                using (IDataReader reader = command.ExecuteReader())
+                using (SqliteDataReader reader = command.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        Debug.Log( "\n" + "name" + reader["name"] + "score" + reader["score"]);
+                        Debug.Log("\n" + "name" + reader["name"] + "score" + reader["score"]);
 
                     }
 
