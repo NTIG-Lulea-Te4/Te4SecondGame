@@ -6,83 +6,99 @@ public class BonkMovement : MonoBehaviour
 {
     Animator animate;
     public bool attacking;
+    public bool attackingH;
+    public bool attackingSp;
+    public bool attackingSH;
+    public bool myAttackFlag;
+    public bool secondAttackFlag;
     public float currentTime;
-    public bool isInteracting;
     public float startingTime;
-    public string currentState;
-    public const string PLAYER_HEAVY = "StopBonkHeavy";
-    public const string PLAYER_SPECIAL = "StopBonkSpecial";
-    public const string PLAYER_LIGHT_TWO = "StopBonkSecondHit";
+    public float startingSecondTime;
+    public float currentSecondTime;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        currentTime = 1f;
+
         startingTime = 0f;
-        attacking = animate.GetBool("attacking");
-        isInteracting = animate.GetBool("isInteracting");
-        animate = GetComponent<Animator>();
+        currentTime = 1.5f;
         currentTime = startingTime;
+        startingSecondTime = 0f;
+        currentSecondTime = 1.5f;
+        currentSecondTime = startingSecondTime;
+        animate = GetComponent<Animator>();
+        attacking = animate.GetBool("attacking");
+        attackingH = animate.GetBool("attackingH");
+        attackingSp = animate.GetBool("attackingSp");
+        attackingSH = animate.GetBool("attackingSH");
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetButtonDown("Fire1")  && isInteracting == false)
-        //{
-        //    ChangeAnimationState(PLAYER_LIGHT);
-        //}
-        if (Input.GetButtonDown("Fire1") && attacking == false)
+        
+        if (Input.GetKeyDown(KeyCode.Mouse0) && attacking == false && myAttackFlag == false)
         {
             animate.SetBool("attacking", true);
         }
-        else if (Input.GetButtonUp("Fire1"))
+        else if (Input.GetKeyUp(KeyCode.Mouse0) && myAttackFlag == false)
         {
             animate.SetBool("attacking", false);
-            
-            currentTime += 1f * Time.deltaTime;
+            myAttackFlag = true;
         }
-
-        if (attacking == true)
+        if (myAttackFlag == true)
         {
-            isInteracting = true;
+            currentTime += 1.5f * Time.deltaTime;
+            if (currentTime >= 1.5f)
+            {
+                
+                myAttackFlag = false;
+                currentTime = 0f;
+            }
         }
-        else
+
+        if (secondAttackFlag == false && myAttackFlag && Input.GetKeyDown(KeyCode.Mouse0))
         {
-            isInteracting = false;
+            animate.SetBool("attackingSH", true);
+
         }
-
-
-        if (currentTime < 1f * Time.deltaTime && Input.GetButton("Fire1"))
+        else if (Input.GetKeyUp(KeyCode.Mouse0))
         {
-            ChangeAnimationState(PLAYER_LIGHT_TWO);
+            animate.SetBool("attackingSH", false);
+            secondAttackFlag = true;
         }
-
-        if (Input.GetButtonDown("Fire2") && isInteracting == false)
+        if (secondAttackFlag == true)
         {
-            ChangeAnimationState(PLAYER_SPECIAL);
+            currentSecondTime += 1.5f * Time.deltaTime;
+            if (currentSecondTime >= 1.5f)
+            {
+
+                secondAttackFlag = false;
+                currentSecondTime = 0f;
+            }
         }
 
-        if (Input.GetButtonDown("Fire3") && isInteracting == false)
+        if (Input.GetButtonDown("Fire2") && attacking == false)
         {
-            ChangeAnimationState(PLAYER_HEAVY);
-
+            animate.SetBool("attackingSp", true);
         }
-    }
-
-    void ChangeAnimationState(string newState)
-    {
-        //stop the same animation from interrupting itself.
-        if (currentState != newState)
+        else if (Input.GetButtonUp("Fire2"))
         {
-            //play animation.
-            animate.Play(newState);
-
-            //reassign the current state.
-            currentState = newState;
+            animate.SetBool("attackingSp", false);
 
         }
 
+        if (Input.GetButtonDown("Fire3") && attacking == false)
+        {
+            animate.SetBool("attackingH", true);
+
+        }
+        else if (Input.GetButtonUp("Fire3"))
+        {
+            animate.SetBool("attackingH", false);
+
+        }
     }
 }
 

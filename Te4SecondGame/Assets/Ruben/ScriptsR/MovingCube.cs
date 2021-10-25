@@ -18,5 +18,7 @@ public class MovingCube : MonoBehaviour
 
         controller.Move(move * speed * Time.deltaTime);
 
+
+        
     }
 }
