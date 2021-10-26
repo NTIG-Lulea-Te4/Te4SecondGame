@@ -1,0 +1,2 @@
+C:\Users\mans.hedlund\Documents\GitHub\Te4SecondGame\Te4SecondGame\obj\Debug\Mirror.Examples.csproj.AssemblyReference.cache
+C:\Users\mans.hedlund\Documents\GitHub\Te4SecondGame\Te4SecondGame\obj\Debug\Mirror.Examples.csproj.CoreCompileInputs.cache

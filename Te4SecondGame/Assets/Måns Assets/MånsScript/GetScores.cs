@@ -12,13 +12,13 @@ public class GetScores : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        sqliteSimple.AddScore("harry", 500);
+        
     }
 
     // Update is called once per frame
     void DisplayScores() 
-    { 
-        leaderboard.text = GetScoresFromDb();
+    {
         
     
     
@@ -27,9 +27,11 @@ public class GetScores : MonoBehaviour
     void Update()
     {
         
+        leaderboard.text = GetScoresFromDb();
 
     }
 
+  
 
     public string GetScoresFromDb()
     {
