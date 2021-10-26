@@ -9,7 +9,7 @@ public class Effect : MonoBehaviour
     public GameObject death;
     public TextMeshPro damageText;
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag.Equals("weapon"))
         //if (collision.collider.tag == "weapon")

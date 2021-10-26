@@ -7,19 +7,22 @@ public class TestHealth : MonoBehaviour
 {
     public static int health = 100;
 
-
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag.Equals("weapon"))
-        //if (collision.collider.tag == "weapon")
-        {
+        //if (other.collis.tag == "weapon")
+        //{
+        //    if (collision.collider.tag == "weapon")
 
-            health -= SwordMovement.attackDamage;
-            Debug.Log(health);
-        }
+        //}
+    }
+
+    void Update()
+    {
         if (health <= 0)
         {
             Destroy(gameObject);
         }
     }
+        
+
 }

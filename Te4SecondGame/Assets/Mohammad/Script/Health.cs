@@ -5,7 +5,7 @@ using Mirror;
 
 public class Health : NetworkBehaviour
 {
-    public static int health = 100;
+    public static int health = 500;
 
     //void OnCollisionEnter(Collision collision)
     //{
@@ -16,14 +16,6 @@ public class Health : NetworkBehaviour
     //        Debug.Log(Health.health);
     //    }
     //}
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag.Equals("Trap"))
-        {
-           
-        }
-        Debug.Log("Trap");
-    }
 
     void Update()
     {
