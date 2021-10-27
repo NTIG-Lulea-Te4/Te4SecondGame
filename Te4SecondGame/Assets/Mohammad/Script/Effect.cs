@@ -12,7 +12,6 @@ public class Effect : MonoBehaviour
     void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag.Equals("weapon"))
-        //if (collision.collider.tag == "weapon")
         {
             Instantiate(blood, transform.position, transform.rotation);
             damageText.text = SwordMovement.attackDamage.ToString();
@@ -20,7 +19,6 @@ public class Effect : MonoBehaviour
             
         }
         if (collision.gameObject.tag.Equals("Trap"))
-        //if (collision.collider.tag == "weapon")
         {
             Instantiate(blood, transform.position, transform.rotation);
             damageText.text = Trapsdmg.trapDamage.ToString();
@@ -35,11 +33,4 @@ public class Effect : MonoBehaviour
         Instantiate(death, transform.position, transform.rotation);
 
     }
-    //void Update()
-    //{
-    //    if (Health.health <= 0)
-    //    {
-    //        Instantiate(death, transform.position, transform.rotation);
-    //    }
-    //}
 }

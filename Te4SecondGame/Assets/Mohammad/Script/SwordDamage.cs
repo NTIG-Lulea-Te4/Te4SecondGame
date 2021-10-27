@@ -7,15 +7,12 @@ public class SwordDamage : NetworkBehaviour
 {
     void OnCollisionEnter(Collision collision)
     {
-        if (isLocalPlayer)
+        if (collision.gameObject.tag.Equals("Player"))
         {
-            if (collision.gameObject.tag.Equals("Player"))
-            {
 
-                Health.health -= SwordMovement.attackDamage;
-                Debug.Log(Health.health);
+            Health.health -= SwordMovement.attackDamage;
+            Debug.Log(Health.health);
 
-            }
         }
     }
 }
