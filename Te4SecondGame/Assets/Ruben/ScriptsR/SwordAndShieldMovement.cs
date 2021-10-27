@@ -22,8 +22,8 @@ public class SwordAndShieldMovement : MonoBehaviour
         animate = GetComponent<Animator>();
         swordLight = animate.GetBool("swordLight");
         shieldParry = animate.GetBool("shieldParry");
-        swordAndShieldHeavy = animate.GetBool("swordAndShieldHeavy");
-        swordAndShieldSpecial = animate.GetBool("swordAndShieldSpecial");
+        swordAndShieldHeavy = animate.GetBool("swordHeavy");
+        swordAndShieldSpecial = animate.GetBool("specialHit");
     }
 
     // Update is called once per frame
@@ -43,22 +43,22 @@ public class SwordAndShieldMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Fire2") && swordAndShieldHeavy == false)
         {
-            animate.SetBool("swordAndShieldHeavy", true);
+            animate.SetBool("swordHeavy", true);
         }
         else if (Input.GetButtonUp("Fire2"))
         {
-            animate.SetBool("swordAndShieldHeavy", false);
+            animate.SetBool("swordHeavy", false);
 
         }
 
         if (Input.GetButtonDown("Fire3") && swordAndShieldSpecial == false)
         {
-            animate.SetBool("swordAndShieldSpecial", true);
+            animate.SetBool("specialHit", true);
 
         }
         else if (Input.GetButtonUp("Fire3"))
         {
-            animate.SetBool("swordAndShieldSpecial", false);
+            animate.SetBool("specialHit", false);
 
         }
 

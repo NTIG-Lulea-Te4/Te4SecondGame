@@ -5,6 +5,7 @@ using UnityEngine;
 public class BonkMovement : MonoBehaviour
 {
     Animator animate;
+    public bool parry;
     public bool attacking;
     public bool attackingH;
     public bool attackingSp;
@@ -28,6 +29,7 @@ public class BonkMovement : MonoBehaviour
         currentSecondTime = 1.5f;
         currentSecondTime = startingSecondTime;
         animate = GetComponent<Animator>();
+        parry = animate.GetBool("parry");
         attacking = animate.GetBool("attacking");
         attackingH = animate.GetBool("attackingH");
         attackingSp = animate.GetBool("attackingSp");
@@ -99,6 +101,15 @@ public class BonkMovement : MonoBehaviour
         {
             animate.SetBool("attackingH", false);
 
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && parry == false)
+        {
+            animate.SetBool("parry", true);
+        }
+        else if (Input.GetKeyUp(KeyCode.Space))
+        {
+            animate.SetBool("parry", false);
         }
     }
 }
