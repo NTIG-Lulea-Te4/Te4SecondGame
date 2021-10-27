@@ -11,10 +11,10 @@ public class BonkMovement : MonoBehaviour
     public bool attackingSH;
     public bool myAttackFlag;
     public bool secondAttackFlag;
-    public float currentTime;
-    public float startingTime;
-    public float startingSecondTime;
-    public float currentSecondTime;
+    private float currentTime;
+    private float startingTime;
+    private float startingSecondTime;
+    private float currentSecondTime;
 
 
     // Start is called before the first frame update
@@ -70,6 +70,7 @@ public class BonkMovement : MonoBehaviour
         }
         if (secondAttackFlag == true)
         {
+            
             currentSecondTime += 1.5f * Time.deltaTime;
             if (currentSecondTime >= 1.5f)
             {

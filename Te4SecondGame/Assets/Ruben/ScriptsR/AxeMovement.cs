@@ -7,11 +7,10 @@ public class AxeMovement : MonoBehaviour
     Animator animate;
     public bool axeLight;
     public bool axeHeavy;
-    public bool axeSpecial;
     public bool axeParry;
-    public float currentTime;
-    public float startingTime;
-    public string currentState;
+    public bool axeSpecial;
+    private float currentTime;
+    private float startingTime;
 
 
     // Start is called before the first frame update
@@ -61,6 +60,15 @@ public class AxeMovement : MonoBehaviour
         {
             animate.SetBool("axeSpecial", false);
 
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && axeParry == false)
+        {
+            animate.SetBool("axeParry", true);
+        }
+        else if (Input.GetKeyUp(KeyCode.Space))
+        {
+            animate.SetBool("axeParry", false);
         }
     }
 }
