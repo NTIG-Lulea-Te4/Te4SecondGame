@@ -7,7 +7,7 @@ public class EnemyAI : MonoBehaviour
 {
     public float lookRadius = 10f;
     public float radius = 5f;
-    GameObject target;
+    GameObject closest ;
     NavMeshAgent agent;
     Animator animator;
 
@@ -17,13 +17,15 @@ public class EnemyAI : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
     }
+    
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        FindClosestEnemy();
         //Vector3 direction = transform.DirectionTo(target.position);
-        target = GameObject.FindGameObjectWithTag("player");
-        float distance = Vector3.Distance(target.transform.position, transform.position);
+        //target = GameObject.FindGameObjectWithTag("Player");
+        float distance = Vector3.Distance(closest.transform.position, transform.position);
         if (distance <= lookRadius)
         {
             agent.stoppingDistance = 3f;
@@ -37,7 +39,7 @@ public class EnemyAI : MonoBehaviour
             //animator.SetBool("Attack", false);
          
          
-                agent.SetDestination(target.transform.position);
+                agent.SetDestination(closest.transform.position);
                 animator.SetFloat("Speed", agent.velocity.magnitude);
 
         
@@ -52,10 +54,29 @@ public class EnemyAI : MonoBehaviour
 
     void FaceTarget()
     {
-        Vector3 direction = (target.transform.position - transform.position).normalized;
+        Vector3 direction = (closest.transform.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
         animator.SetFloat("Speed", 0f);
+    }
+    public GameObject FindClosestEnemy()
+    {
+        GameObject[] enemies;
+        enemies = GameObject.FindGameObjectsWithTag("Player");
+        closest = null;
+        float distance = Mathf.Infinity;
+        Vector3 position = transform.position;
+        foreach (GameObject enemy in enemies)
+        {
+            Vector3 diff = enemy.transform.position - position;
+            float curDistance = diff.sqrMagnitude;
+            if(curDistance < distance)
+            {
+                closest = enemy;
+                distance = curDistance;
+            }
+        }
+        return closest;
     }
 
     private void OnDrawGizmosSelected()
