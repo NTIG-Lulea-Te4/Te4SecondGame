@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
     public float lookRadius = 10f;
+    public float radius = 5f;
     GameObject target;
     NavMeshAgent agent;
     Animator animator;
@@ -13,7 +14,6 @@ public class EnemyAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("player");
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
     }
@@ -22,20 +22,32 @@ public class EnemyAI : MonoBehaviour
     void Update()
     {
         //Vector3 direction = transform.DirectionTo(target.position);
+        target = GameObject.FindGameObjectWithTag("player");
         float distance = Vector3.Distance(target.transform.position, transform.position);
         if (distance <= lookRadius)
         {
+            agent.stoppingDistance = 3f;
             if (distance <= agent.stoppingDistance)
             {
+
                 FaceTarget();
-                
+                animator.SetFloat("Speed", agent.velocity.magnitude);
+
             }
-            agent.SetDestination(target.transform.position);
-            animator.SetFloat("Speed", agent.velocity.magnitude);
+            //animator.SetBool("Attack", false);
+         
+         
+                agent.SetDestination(target.transform.position);
+                animator.SetFloat("Speed", agent.velocity.magnitude);
+
+        
+
+
             //LookToward(transform.position, distance);
             //Vector3 movement = transform.forward * Time.deltaTime * 1f;
         }
         animator.SetFloat("Speed", agent.velocity.magnitude);
+        //animator.SetBool("Attack", false);
     }
 
     void FaceTarget()
