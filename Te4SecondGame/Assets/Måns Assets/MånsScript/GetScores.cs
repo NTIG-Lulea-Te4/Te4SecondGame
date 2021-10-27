@@ -8,26 +8,20 @@ public class GetScores : MonoBehaviour
 {
     string dbLocation;
     Text leaderboard;
-    SQLiteSimple sqliteSimple;
+    object sqliteSimple;
     // Start is called before the first frame update
     void Start()
     {
-        sqliteSimple.AddScore("harry", 500);
+        sqliteSimple = GetComponent<SQLiteSimple>();
+        leaderboard.text = GetScoresFromDb();
         
     }
 
     // Update is called once per frame
-    void DisplayScores() 
-    {
-        
-    
-    
-    }
     
     void Update()
     {
         
-        leaderboard.text = GetScoresFromDb();
 
     }
 
@@ -35,7 +29,7 @@ public class GetScores : MonoBehaviour
 
     public string GetScoresFromDb()
     {
-        dbLocation = sqliteSimple.ScoreboardDatabase;
+        dbLocation = "URI=file:Scoreboard.db";
         string scores;
         using (SqliteConnection connection = new SqliteConnection(dbLocation))
         {
@@ -43,7 +37,7 @@ public class GetScores : MonoBehaviour
 
             using (SqliteCommand command = connection.CreateCommand())
             {
-                command.CommandText = "SELECT * FROM score;";
+                command.CommandText = "SELECT * FROM scores;";
                 
                 using (SqliteDataReader reader = command.ExecuteReader())
                 {

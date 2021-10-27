@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using Mono.Data.Sqlite;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class SQLiteSimple : MonoBehaviour
 {
-    private string scoreboardDatabase;
+    private string scoreboardDatabase = "URI=file:Scoreboard.db";
+    public Text leaderboard;
     // Start is called before the first frame update
 
     #region getsetters
@@ -22,8 +24,11 @@ public class SQLiteSimple : MonoBehaviour
     #endregion
     void Start()
     {
-        scoreboardDatabase = "URI=file:Scoreboard.db";
         CreateDB();
+        AddScore("Måns", 5);
+        AddScore("harry", 10);
+        DisplayScore();
+        leaderboard.text = GetScoresFromDb();
     }
 
     // Update is called once per frame
@@ -82,12 +87,12 @@ public class SQLiteSimple : MonoBehaviour
 
             using (SqliteCommand command = connection.CreateCommand())
             {
-                command.CommandText = "SELECT * FROM score;";
+                command.CommandText = "SELECT * FROM scores;";
                 using (SqliteDataReader reader = command.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        Debug.Log("\n" + "name" + reader["name"] + "score" + reader["score"]);
+                        Debug.Log("\n" + "name " + reader["name"] + " score " + reader["score"]);
 
                     }
 
@@ -96,6 +101,35 @@ public class SQLiteSimple : MonoBehaviour
 
             connection.Close();
         }
+
+
+    }
+    public string GetScoresFromDb()
+    {
+        string scores;
+        using (SqliteConnection connection = new SqliteConnection(scoreboardDatabase))
+        {
+            connection.Open();
+
+            using (SqliteCommand command = connection.CreateCommand())
+            {
+                command.CommandText = "SELECT * FROM scores;";
+
+                using (SqliteDataReader reader = command.ExecuteReader())
+                {
+                    
+                        scores = "name: " + reader["name"] + " score: " + reader["score"] + "\n";
+
+                        
+
+                }
+
+            }
+
+            connection.Close();
+            return scores;
+        }
+
 
 
     }
