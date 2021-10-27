@@ -7,7 +7,6 @@ TagManager:
   - Vertical Inner Wall
   - Horizontal Inner Wall
   - Outer Wall
-  - player
   layers:
   - Default
   - TransparentFX
@@ -15,8 +14,8 @@ TagManager:
   - 
   - Water
   - UI
-  - Ground
-  - 
+  - Player
+  - Hand
   - 
   - 
   - 
