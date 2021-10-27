@@ -5,6 +5,7 @@ using UnityEngine;
 public class CharacterAnimationStateController : MonoBehaviour
 {
     Animator animator;
+
     //bool isWalking;
     //bool forwardPressed;
 
@@ -18,6 +19,7 @@ public class CharacterAnimationStateController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
     }
+
 
     void Update()
     {
@@ -36,5 +38,6 @@ public class CharacterAnimationStateController : MonoBehaviour
         animator.SetBool("isWalking", Input.GetKey("w"));
         animator.SetBool("isRunning", (Input.GetKey("left shift") && Input.GetKey("w")));
         animator.SetBool("isAttacking", Input.GetKey("mouse 0"));
+
     }
 }

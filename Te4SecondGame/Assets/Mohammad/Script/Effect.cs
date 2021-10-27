@@ -29,11 +29,17 @@ public class Effect : MonoBehaviour
         }
 
     }
-    void Update()
+
+    public void Dying()
     {
-        if (Health.health <= 0)
-        {
-            Instantiate(death, transform.position, transform.rotation);
-        }
+        Instantiate(death, transform.position, transform.rotation);
+
     }
+    //void Update()
+    //{
+    //    if (Health.health <= 0)
+    //    {
+    //        Instantiate(death, transform.position, transform.rotation);
+    //    }
+    //}
 }

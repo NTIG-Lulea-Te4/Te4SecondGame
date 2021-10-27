@@ -375,9 +375,9 @@ GameObject:
   - component: {fileID: 6198315646237331042}
   - component: {fileID: -8778113346579514972}
   - component: {fileID: 8153753185594970971}
-  - component: {fileID: 1450464673131430617}
-  - component: {fileID: 416105845537258026}
-  - component: {fileID: 3461274430615141249}
+  - component: {fileID: 6494430559331271156}
+  - component: {fileID: 8902828352884231}
+  - component: {fileID: 3881012321718393114}
   - component: {fileID: 4618607686352527107}
   m_Layer: 0
   m_Name: Body
@@ -385,7 +385,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1905358175621241651
 Transform:
   m_ObjectHideFlags: 0
@@ -514,7 +514,7 @@ MonoBehaviour:
   showGizmos: 0
   showOverlay: 0
   overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
---- !u!114 &1450464673131430617
+--- !u!114 &6494430559331271156
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -529,7 +529,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   speed: 5
---- !u!114 &416105845537258026
+--- !u!114 &8902828352884231
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -538,12 +538,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4203018109805102746}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a8f730c594c7cf42a86e3d5eee150d2, type: 3}
+  m_Script: {fileID: 11500000, guid: 504110c1a044b6a469b9043032ae0bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
---- !u!114 &3461274430615141249
+--- !u!114 &3881012321718393114
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -552,12 +550,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4203018109805102746}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1f3d096fd1c66e45b2bc364497c4cc5, type: 3}
+  m_Script: {fileID: 11500000, guid: 27344fd84b9c5e84fb1d39a5a9ec7bd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blood: {fileID: 2135273490607513796, guid: 8a93287e1f7f89a499aae74c22aa8fc2, type: 3}
-  death: {fileID: 1834194341294532, guid: d5f26854a8904624c8073139cd2eb346, type: 3}
-  damageText: {fileID: 9123674844181685227, guid: 515faa8600ece6d4e94c3d4d081674dd, type: 3}
+  blood: {fileID: 0}
+  death: {fileID: 0}
+  damageText: {fileID: 0}
 --- !u!54 &4618607686352527107
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Abdula/Scenes/NetworkOnlineScene.unity
+    guid: de35ad7e25798334e80829638b7d03ef
   m_configObjects: {}

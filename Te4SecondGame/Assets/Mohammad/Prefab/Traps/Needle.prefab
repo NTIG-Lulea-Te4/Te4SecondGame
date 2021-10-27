@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 7274920299485399104}
   - component: {fileID: 7274920299486726240}
   - component: {fileID: 7274920299487693472}
-  - component: {fileID: 7274920299499162836}
   - component: {fileID: 708624995608176990}
+  - component: {fileID: 4178702300622015163}
   m_Layer: 0
   m_Name: Needle
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7274920299485500512}
   m_LocalRotation: {x: 1.7112914e-15, y: 1, z: -0.000000021855694, w: 0.0000000754979}
-  m_LocalPosition: {x: 0, y: -2.25, z: 0}
+  m_LocalPosition: {x: 0, y: -0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7274920299485399106}
@@ -83,25 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &7274920299499162836
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7274920299485500512}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c32e3e92af33fc54abb2518834a82385, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &708624995608176990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,6 +95,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9f97627be74ea74d9bb8fe55c1fa856, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &4178702300622015163
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7274920299485500512}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5898658, y: 1.5255913, z: 1.5487009}
+  m_Center: {x: 0.005984783, y: 0.73738736, z: -0.00897789}
 --- !u!1 &7274920299485500514
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,7 +117,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7274920299485399106}
-  - component: {fileID: 7274920299495443872}
   m_Layer: 0
   m_Name: Needle
   m_TagString: Untagged
@@ -147,21 +140,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &7274920299495443872
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7274920299485500514}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &7274920299485500516
 GameObject:
   m_ObjectHideFlags: 0

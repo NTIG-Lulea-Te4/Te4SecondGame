@@ -54,6 +54,7 @@ public class CharacterControll : NetworkBehaviour
 
     bool isJumping;
 
+
     #endregion
 
     public CharacterControll()
@@ -119,6 +120,7 @@ public class CharacterControll : NetworkBehaviour
             transform.Rotate(new Vector3(0, 1, 0) * currentMouseDelta.x * mouseSensitivity);
         }
     }
+
 
     void UpdateMovement()
     {

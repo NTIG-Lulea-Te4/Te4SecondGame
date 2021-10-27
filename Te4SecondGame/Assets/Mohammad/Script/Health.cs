@@ -1,26 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Mirror;
 
-public class Health : NetworkBehaviour
+public class Health : MonoBehaviour
 {
-    public static int health = 500;
-
-    //void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.gameObject.tag.Equals("Trap"))
-    //    {
-
-    //        Health.health -= Trapsdmg.trapDamage;
-    //        Debug.Log(Health.health);
-    //    }
-    //}
+    public static int health = 100;
 
     void Update()
     {
         if (health <= 0)
         {
+            GetComponent<Effect>().Dying();
             Destroy(gameObject);
         }
     }

@@ -10,11 +10,14 @@ public class SwordMovement : MonoBehaviour
     public GameObject target;
     public float speed;
     public static int attackDamage;
-    //public static Vector3 startPos;
+
+
 
 
     void Weapon()
     {
+
+
         if (Input.GetMouseButton(0))
         { 
             attackDamage = 10;
@@ -39,18 +42,7 @@ public class SwordMovement : MonoBehaviour
     }
 
 }
-//public void StartPosition()
-//{
-//    startPos = transform.position;
-//}
 
-//    TakingDmg.instance.HeavyAttack();
-//    //GetComponent<TakingDmg>().HeavyAttack();
-
-//public void Awake()
-//{
-//    instance = this;
-//}
 
 
 
