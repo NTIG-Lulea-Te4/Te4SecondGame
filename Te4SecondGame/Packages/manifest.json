@@ -13,7 +13,11 @@
     "com.unity.xr.oculus": "1.10.0",
 =======
     "com.unity.xr.management": "4.2.0",
+<<<<<<< HEAD
     "com.valvesoftware.unity.openvr": "file:../Assets/SteamVR/OpenVRUnityXRPackage/Editor/com.valvesoftware.unity.openvr-1.1.4.tgz",
+>>>>>>> main
+=======
+    
 >>>>>>> main
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",

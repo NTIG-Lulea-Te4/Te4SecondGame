@@ -2303,6 +2303,18 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.00022089481, y: 0.27315086, z: 0.009640962}
     m_Extent: {x: 0.09390791, y: 0.12635857, z: 0.13169779}
   m_DirtyAABB: 0
+--- !u!114 &7034513176465731152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8378962880348587135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ee2029769f22c84bad2bbdf3efcb122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8387349806742929572
 GameObject:
   m_ObjectHideFlags: 0
@@ -2682,6 +2694,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SwordAndShieldController
       objectReference: {fileID: 0}
+    - target: {fileID: 8635830617108759727, guid: ed4ef6289ae1fc54885e42eb4d35acd3, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 8635830618055820120, guid: ed4ef6289ae1fc54885e42eb4d35acd3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.62
@@ -2690,10 +2706,39 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.481
       objectReference: {fileID: 0}
+    - target: {fileID: 8635830618657409106, guid: ed4ef6289ae1fc54885e42eb4d35acd3, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635830618657409106, guid: ed4ef6289ae1fc54885e42eb4d35acd3, type: 3}
+      propertyPath: m_Size.y
+      value: 4.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635830618657409106, guid: ed4ef6289ae1fc54885e42eb4d35acd3, type: 3}
+      propertyPath: m_Size.z
+      value: 2.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635830618657409106, guid: ed4ef6289ae1fc54885e42eb4d35acd3, type: 3}
+      propertyPath: m_Center.y
+      value: 1.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635830618657409106, guid: ed4ef6289ae1fc54885e42eb4d35acd3, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635830618657409108, guid: ed4ef6289ae1fc54885e42eb4d35acd3, type: 3}
+      propertyPath: m_TagString
+      value: SwordAndShieldID
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed4ef6289ae1fc54885e42eb4d35acd3, type: 3}
 --- !u!4 &8378962881767344262 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8635830617108759725, guid: ed4ef6289ae1fc54885e42eb4d35acd3, type: 3}
+  m_PrefabInstance: {fileID: 256894749906619435}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8378962880348587135 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8635830618657409108, guid: ed4ef6289ae1fc54885e42eb4d35acd3, type: 3}
   m_PrefabInstance: {fileID: 256894749906619435}
   m_PrefabAsset: {fileID: 0}

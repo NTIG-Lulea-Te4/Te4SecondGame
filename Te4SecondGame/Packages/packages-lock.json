@@ -133,6 +133,7 @@
       "url": "https://packages.unity.com"
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
     "com.unity.xr.oculus": {
       "version": "1.10.0",
       "depth": 0,
@@ -154,6 +155,8 @@
       }
 >>>>>>> main
     },
+=======
+>>>>>>> main
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,
