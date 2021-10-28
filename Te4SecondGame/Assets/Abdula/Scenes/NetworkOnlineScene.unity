@@ -1795,6 +1795,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inner Wall Horizontal
       objectReference: {fileID: 0}
+    - target: {fileID: 5579491196611209594, guid: be8b53d3271274f43b0108b0e7eed7ee, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7334507475062893008, guid: be8b53d3271274f43b0108b0e7eed7ee, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -3170,7 +3174,7 @@ MonoBehaviour:
   disconnectInactiveConnections: 1
   disconnectInactiveTimeout: 300
   authenticator: {fileID: 0}
-  playerPrefab: {fileID: 2577038588203407260, guid: 5fb79fc8a0da7044cb0255c024241296, type: 3}
+  playerPrefab: {fileID: 633258588722418104, guid: a66e399cdf8fd124a8db783eb91efd78, type: 3}
   autoCreatePlayer: 1
   playerSpawnMethod: 0
   spawnPrefabs: []
@@ -5351,7 +5355,7 @@ GameObject:
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -5362,7 +5366,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786338472}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1786338474
 Camera:
   m_ObjectHideFlags: 0
@@ -5572,7 +5576,7 @@ GameObject:
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -5647,7 +5651,7 @@ Transform:
   m_GameObject: {fileID: 1849111987}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 50, y: 0.5, z: 50}
+  m_LocalScale: {x: 100, y: 0.5, z: 100}
   m_Children:
   - {fileID: 345859165}
   - {fileID: 309525392}
@@ -5667,7 +5671,7 @@ GameObject:
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
