@@ -1,19 +1,34 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
+<<<<<<< HEAD
     m_FilePath: C:/Users/truei/Documents/GitHub/Te4SecondGame/Te4SecondGame/Packages/manifest.json
+=======
+    m_FilePath: C:/Users/Ruben.bergenstrale/Documents/GitHub/Te4SecondGame/Te4SecondGame/Packages/manifest.json
+>>>>>>> main
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
+<<<<<<< HEAD
       ticks: 637710483483508756
     m_Hash: 2821594210
   m_LockFileStatus:
     m_FilePath: C:/Users/truei/Documents/GitHub/Te4SecondGame/Te4SecondGame/Packages/packages-lock.json
+=======
+      ticks: 637710325526125736
+    m_Hash: 2821594210
+  m_LockFileStatus:
+    m_FilePath: C:/Users/Ruben.bergenstrale/Documents/GitHub/Te4SecondGame/Te4SecondGame/Packages/packages-lock.json
+>>>>>>> main
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
+<<<<<<< HEAD
       ticks: 637710483483508756
+=======
+      ticks: 637710325526133733
+>>>>>>> main
     m_Hash: 2232321354
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -25,7 +40,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.9.0
       source: 1
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.collab-proxy@1.9.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.collab-proxy@1.9.0
+>>>>>>> main
       assetPath: Packages/com.unity.collab-proxy
       name: com.unity.collab-proxy
       displayName: Version Control
@@ -138,7 +157,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.7
       source: 1
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.ide.rider@2.0.7
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.ide.rider@2.0.7
+>>>>>>> main
       assetPath: Packages/com.unity.ide.rider
       name: com.unity.ide.rider
       displayName: JetBrains Rider Editor
@@ -245,7 +268,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.11
       source: 1
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.ide.visualstudio@2.0.11
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.ide.visualstudio@2.0.11
+>>>>>>> main
       assetPath: Packages/com.unity.ide.visualstudio
       name: com.unity.ide.visualstudio
       displayName: Visual Studio Editor
@@ -332,7 +359,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.2.4
       source: 1
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.ide.vscode@1.2.4
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.ide.vscode@1.2.4
+>>>>>>> main
       assetPath: Packages/com.unity.ide.vscode
       name: com.unity.ide.vscode
       displayName: Visual Studio Code Editor
@@ -403,7 +434,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.2
       source: 1
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.quicksearch@2.0.2
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.quicksearch@2.0.2
+>>>>>>> main
       assetPath: Packages/com.unity.quicksearch
       name: com.unity.quicksearch
       displayName: Quick Search
@@ -612,7 +647,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.1.29
       source: 1
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.test-framework@1.1.29
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.test-framework@1.1.29
+>>>>>>> main
       assetPath: Packages/com.unity.test-framework
       name: com.unity.test-framework
       displayName: Test Framework
@@ -705,7 +744,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 3.0.6
       source: 1
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.textmeshpro@3.0.6
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.textmeshpro@3.0.6
+>>>>>>> main
       assetPath: Packages/com.unity.textmeshpro
       name: com.unity.textmeshpro
       displayName: TextMeshPro
@@ -864,7 +907,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.4.8
       source: 1
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.timeline@1.4.8
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.timeline@1.4.8
+>>>>>>> main
       assetPath: Packages/com.unity.timeline
       name: com.unity.timeline
       displayName: Timeline
@@ -1020,7 +1067,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.ugui@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.ugui@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.ugui
       name: com.unity.ugui
       displayName: Unity UI
@@ -1083,7 +1134,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 4.2.0
       source: 1
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.xr.management@4.2.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.xr.management@4.2.0
+>>>>>>> main
       assetPath: Packages/com.unity.xr.management
       name: com.unity.xr.management
       displayName: XR Plugin Management
@@ -1218,7 +1273,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.ai@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.ai@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.ai
       name: com.unity.modules.ai
       displayName: AI
@@ -1266,7 +1325,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.androidjni@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.androidjni@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.androidjni
       name: com.unity.modules.androidjni
       displayName: Android JNI
@@ -1314,7 +1377,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.animation@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.animation@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.animation
       name: com.unity.modules.animation
       displayName: Animation
@@ -1362,7 +1429,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.assetbundle@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.assetbundle@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.assetbundle
       name: com.unity.modules.assetbundle
       displayName: Asset Bundle
@@ -1410,7 +1481,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.audio@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.audio@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.audio
       name: com.unity.modules.audio
       displayName: Audio
@@ -1458,7 +1533,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.cloth@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.cloth@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.cloth
       name: com.unity.modules.cloth
       displayName: Cloth
@@ -1510,7 +1589,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.director@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.director@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.director
       name: com.unity.modules.director
       displayName: Director
@@ -1566,7 +1649,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.imageconversion@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.imageconversion@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.imageconversion
       name: com.unity.modules.imageconversion
       displayName: Image Conversion
@@ -1615,7 +1702,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.imgui@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.imgui@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.imgui
       name: com.unity.modules.imgui
       displayName: IMGUI
@@ -1663,7 +1754,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.jsonserialize@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.jsonserialize@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.jsonserialize
       name: com.unity.modules.jsonserialize
       displayName: JSONSerialize
@@ -1711,7 +1806,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.particlesystem@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.particlesystem@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.particlesystem
       name: com.unity.modules.particlesystem
       displayName: Particle System
@@ -1759,7 +1858,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.physics@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.physics@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.physics
       name: com.unity.modules.physics
       displayName: Physics
@@ -1807,7 +1910,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.physics2d@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.physics2d@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.physics2d
       name: com.unity.modules.physics2d
       displayName: Physics 2D
@@ -1855,7 +1962,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.screencapture@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.screencapture@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.screencapture
       name: com.unity.modules.screencapture
       displayName: Screen Capture
@@ -1907,7 +2018,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.terrain@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.terrain@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.terrain
       name: com.unity.modules.terrain
       displayName: Terrain
@@ -1955,7 +2070,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.terrainphysics@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.terrainphysics@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.terrainphysics
       name: com.unity.modules.terrainphysics
       displayName: Terrain Physics
@@ -2011,7 +2130,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.tilemap@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.tilemap@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.tilemap
       name: com.unity.modules.tilemap
       displayName: Tilemap
@@ -2063,7 +2186,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.ui@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.ui@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.ui
       name: com.unity.modules.ui
       displayName: UI
@@ -2111,7 +2238,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.uielements@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.uielements@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.uielements
       name: com.unity.modules.uielements
       displayName: UIElements
@@ -2175,7 +2306,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.umbra@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.umbra@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.umbra
       name: com.unity.modules.umbra
       displayName: Umbra
@@ -2223,7 +2358,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.unityanalytics@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.unityanalytics@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.unityanalytics
       name: com.unity.modules.unityanalytics
       displayName: Unity Analytics
@@ -2279,7 +2418,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.unitywebrequest
       name: com.unity.modules.unitywebrequest
       displayName: Unity Web Request
@@ -2327,7 +2470,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.unitywebrequestassetbundle
       name: com.unity.modules.unitywebrequestassetbundle
       displayName: Unity Web Request Asset Bundle
@@ -2383,7 +2530,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.unitywebrequestaudio
       name: com.unity.modules.unitywebrequestaudio
       displayName: Unity Web Request Audio
@@ -2439,7 +2590,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.unitywebrequesttexture
       name: com.unity.modules.unitywebrequesttexture
       displayName: Unity Web Request Texture
@@ -2495,7 +2650,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.unitywebrequestwww
       name: com.unity.modules.unitywebrequestwww
       displayName: Unity Web Request WWW
@@ -2567,7 +2726,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.vehicles@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.vehicles@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.vehicles
       name: com.unity.modules.vehicles
       displayName: Vehicles
@@ -2619,7 +2782,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.video@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.video@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.video
       name: com.unity.modules.video
       displayName: Video
@@ -2679,7 +2846,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.vr@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.vr@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.vr
       name: com.unity.modules.vr
       displayName: VR
@@ -2741,7 +2912,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.wind@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.wind@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.wind
       name: com.unity.modules.wind
       displayName: Wind
@@ -2789,7 +2964,11 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.xr@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.xr@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.xr
       name: com.unity.modules.xr
       displayName: XR
@@ -2849,7 +3028,11 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.subsystems@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.subsystems@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.subsystems
       name: com.unity.modules.subsystems
       displayName: Subsystems
@@ -2901,7 +3084,11 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.0
       source: 2
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.uielementsnative@1.0.0
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.modules.uielementsnative@1.0.0
+>>>>>>> main
       assetPath: Packages/com.unity.modules.uielementsnative
       name: com.unity.modules.uielementsnative
       displayName: UIElements Native
@@ -2960,7 +3147,11 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 2.1.8
       source: 1
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.xr.legacyinputhelpers@2.1.8
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.xr.legacyinputhelpers@2.1.8
+>>>>>>> main
       assetPath: Packages/com.unity.xr.legacyinputhelpers
       name: com.unity.xr.legacyinputhelpers
       displayName: XR Legacy Input Helpers
@@ -3031,7 +3222,11 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.6
       source: 1
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.subsystemregistration@1.0.6
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.subsystemregistration@1.0.6
+>>>>>>> main
       assetPath: Packages/com.unity.subsystemregistration
       name: com.unity.subsystemregistration
       displayName: Subsystem Registration
@@ -3084,7 +3279,11 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.6
       source: 1
+<<<<<<< HEAD
       resolvedPath: C:\Users\truei\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.ext.nunit@1.0.6
+=======
+      resolvedPath: C:\Users\Ruben.bergenstrale\Documents\GitHub\Te4SecondGame\Te4SecondGame\Library\PackageCache\com.unity.ext.nunit@1.0.6
+>>>>>>> main
       assetPath: Packages/com.unity.ext.nunit
       name: com.unity.ext.nunit
       displayName: Custom NUnit
@@ -3142,5 +3341,9 @@ m_PackageAssets:
         path: 
   m_LocalPackages:
     m_LocalFileStatus: []
+<<<<<<< HEAD
 m_ProjectPath: C:/Users/truei/Documents/GitHub/Te4SecondGame/Te4SecondGame/Packages
+=======
+m_ProjectPath: C:/Users/Ruben.bergenstrale/Documents/GitHub/Te4SecondGame/Te4SecondGame/Packages
+>>>>>>> main
 m_EditorVersion: 2020.3.19f1 (68f137dc9bbe)

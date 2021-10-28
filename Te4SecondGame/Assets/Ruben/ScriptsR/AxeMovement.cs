@@ -9,18 +9,13 @@ public class AxeMovement : MonoBehaviour
     public bool axeHeavy;
     public bool axeParry;
     public bool axeSpecial;
-    private float currentTime;
-    private float startingTime;
     public static int axeDmg;
-
 
     // Start is called before the first frame update
     void Start()
     {
-        currentTime = 1f;
-        startingTime = 0f;
-        currentTime = startingTime;
         animate = GetComponent<Animator>();
+        BonkMovement.weaponDamage = axeDmg;
         axeParry = animate.GetBool("axeParry");
         axeLight = animate.GetBool("axeLight");
         axeHeavy = animate.GetBool("axeHeavy");
@@ -34,13 +29,12 @@ public class AxeMovement : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && axeLight == false)
         {
             animate.SetBool("axeLight", true);
-            axeDmg = -10;
+            axeDmg = -5;
         }
         else if (Input.GetButtonUp("Fire1"))
         {
             animate.SetBool("axeLight", false);
-
-            currentTime += 1f * Time.deltaTime;
+            
         }
 
         if (Input.GetButtonDown("Fire2") && axeHeavy == false)
@@ -57,7 +51,7 @@ public class AxeMovement : MonoBehaviour
         if (Input.GetButtonDown("Fire3") && axeSpecial == false)
         {
             animate.SetBool("axeSpecial", true);
-            axeDmg = -30;
+            axeDmg = -10;
 
         }
         else if (Input.GetButtonUp("Fire3"))
@@ -66,12 +60,12 @@ public class AxeMovement : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && axeParry == false)
+        if (Input.GetKeyDown(KeyCode.Q) && axeParry == false)
         {
             animate.SetBool("axeParry", true);
             axeDmg = 0;
         }
-        else if (Input.GetKeyUp(KeyCode.Space))
+        else if (Input.GetKeyUp(KeyCode.Q))
         {
             animate.SetBool("axeParry", false);
         }
