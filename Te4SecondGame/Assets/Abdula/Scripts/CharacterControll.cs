@@ -8,6 +8,8 @@ public class CharacterControll : NetworkBehaviour
     #region Variable
     CharacterController characterController;
 
+    
+
     [SerializeField]
     Transform playerFirstPersonCamera;
 
@@ -53,7 +55,6 @@ public class CharacterControll : NetworkBehaviour
     float velocityY;
 
     bool isJumping;
-
 
     #endregion
 
@@ -121,7 +122,6 @@ public class CharacterControll : NetworkBehaviour
         }
     }
 
-
     void UpdateMovement()
     {
         if (isLocalPlayer)
@@ -180,5 +180,11 @@ public class CharacterControll : NetworkBehaviour
 
         characterController.slopeLimit = 45.0f;
         isJumping = false;
+    }
+
+    public override void OnStartAuthority()
+    {
+        playerFirstPersonCamera.gameObject.SetActive(true);
+        enabled = true;
     }
 }

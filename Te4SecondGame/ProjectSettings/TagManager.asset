@@ -4,11 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - weapon
   - Vertical Inner Wall
   - Horizontal Inner Wall
   - Outer Wall
-  - Trap
+  - EnemyAI
   layers:
   - Default
   - TransparentFX
@@ -16,8 +15,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Player
+  - Hand
   - 
   - 
   - 
