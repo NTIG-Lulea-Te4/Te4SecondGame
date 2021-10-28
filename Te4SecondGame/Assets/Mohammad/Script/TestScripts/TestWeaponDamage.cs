@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class TestWeaponDamage : MonoBehaviour
 {
-    public int TestWeapndmg = -10;
+    public static int TestWeapndmg = -10;
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag.Equals("Player"))
         {
-            TestHealth.health += TestWeapndmg;
-            Debug.Log(TestHealth.health);
+            Health.health += TestWeapndmg;
+            Debug.Log(Health.health);
         }
     }
 }

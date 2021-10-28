@@ -9,11 +9,10 @@ public class TestHealth : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        //if (other.collis.tag == "weapon")
-        //{
-        //    if (collision.collider.tag == "weapon")
-
-        //}
+        if (other.gameObject.tag.Equals("weapon"))
+        {
+            Debug.Log("Weapon dmg");
+        }
     }
 
     void Update()

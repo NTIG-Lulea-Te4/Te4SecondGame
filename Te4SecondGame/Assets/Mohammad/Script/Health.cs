@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public static int health = 100;
+    public static int health = 300;
 
     void Update()
     {
         if (health <= 0)
         {
-            GetComponent<Effect>().Dying();
             Destroy(gameObject);
+            GetComponent<Effect>().Death();
+
         }
     }
 }

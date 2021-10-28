@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-public class OldSwordMovment : MonoBehaviour
+public class OldWeaponMovement : MonoBehaviour
 {
 
     public GameObject target;
