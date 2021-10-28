@@ -6,13 +6,17 @@ public class AiHealth : MonoBehaviour
 {
     public static int Aihleath = 100;
 
-
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        if (Aihleath <= 0)
+        if (other.gameObject.tag.Equals("GreatSwordID"))
         {
-            Destroy(gameObject);
-            GetComponent<Effect>().Death();
+            if (AiHealth.Aihleath <= 0)
+            {
+                Destroy(gameObject);
+                GetComponent<Effect>().Death();
+            }
         }
     }
+
+
 }

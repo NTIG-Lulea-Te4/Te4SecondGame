@@ -21,5 +21,8 @@ public class WeaponDamage : MonoBehaviour
             AiHealth.Aihleath += AxeMovement.axeDmg;
             Debug.Log(AiHealth.Aihleath);
         }
+
+
     }
+
 }
