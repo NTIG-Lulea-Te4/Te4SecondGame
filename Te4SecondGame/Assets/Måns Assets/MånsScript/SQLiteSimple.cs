@@ -25,8 +25,6 @@ public class SQLiteSimple : MonoBehaviour
     void Start()
     {
         CreateDB();
-        AddScore("Måns", 5);
-        AddScore("harry", 10);
         DisplayScore();
         leaderboard.text = GetScoresFromDb();
     }
