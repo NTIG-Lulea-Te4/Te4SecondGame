@@ -12,6 +12,7 @@ public class AiHealth : MonoBehaviour
         if (Aihleath <= 0)
         {
             Destroy(gameObject);
+            GetComponent<Effect>().Death();
         }
     }
 }
