@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
-    #region SerializeField
+    #region SerializeFields/Variables
     [SerializeField]
     private NetworkManager networkManager;
 
@@ -20,31 +20,46 @@ public class MenuScript : MonoBehaviour
     [SerializeField]
     private InputField inputFieldForIpAdress;
 
+    static public bool isMainMenuActive;
+
+    public static bool isHost;
+    public static bool isServer;
+    public static bool isClient;
+
+    public Camera mainMenuCamera;
+    public Camera characterSelectionCamera;
+
     #endregion
+
 
     private void Start()
     {
-        //inGameMenuCanvas.SetActive(false);
+        mainMenuCamera.enabled = true;
+        characterSelectionCamera.enabled = false;
     }
 
-    private void Update()
+    private void Awake()
     {
-
+        isMainMenuActive = true;
     }
 
     public void OnHostOnlyButtonClick()
     {
         networkManager.StartServer();
-
-        //inGameMenuCanvas.SetActive(true);
+        isMainMenuActive = false;
     }
 
     public void OnHostAndPlayButtonClick()
     {
-        networkManager.StartHost();
+        //networkManager.StartHost();
 
-       // inGameMenuCanvas.SetActive(true);
-        Debug.Log("Hosting game...");
+        mainMenuCamera.enabled = false;
+        characterSelectionCamera.enabled = true;
+
+        isHost = true;
+
+        isMainMenuActive = false;
+        
     }
 
     public void OnJoinAsClientClick()
@@ -59,6 +74,7 @@ public class MenuScript : MonoBehaviour
         landingPagePanel.SetActive(true);
         IpInputFieldPanel.SetActive(false);
 
+       
     }
 
     //Ger nätverks adressen ett nytt värde beroande på vad som skivs in i inputfield
@@ -68,9 +84,15 @@ public class MenuScript : MonoBehaviour
         string ipAdress = inputFieldForIpAdress.text;
 
         networkManager.networkAddress = ipAdress;
-        networkManager.StartClient();
+        //networkManager.StartClient();
 
-       // inGameMenuCanvas.SetActive(true);
+        mainMenuCamera.enabled = false;
+        characterSelectionCamera.enabled = true;
+
+        isClient = true;
+
+
+        isMainMenuActive = false;
     }
 
     static public void OnExitClick()

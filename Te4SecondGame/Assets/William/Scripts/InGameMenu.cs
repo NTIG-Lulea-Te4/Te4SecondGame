@@ -10,53 +10,90 @@ public class InGameMenu : NetworkBehaviour
     [SerializeField]
     private GameObject inGameMenuPanel;
 
-    [Scene]
-    public string mainMenuSceneName;
+    [SerializeField]
+    private NetworkManager networkManager;
+
 
     bool isMenuActive;
 
     private void Awake()
     {
-
+        inGameMenuPanel.SetActive(false);
     }
 
 
     void Start()
     {
         isMenuActive = false;
+
     }
 
     void Update()
     {
-        if (SceneManager.GetActiveScene() != SceneManager.GetSceneByName(mainMenuSceneName))
+
+        OpenInGameMenu();
+
+        if (Input.GetKeyDown(KeyCode.N))
         {
-
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                if (isMenuActive)
-                {
-                    inGameMenuPanel.SetActive(false);
-                    isMenuActive = false;
-                }
-                else
-                {
-                    inGameMenuPanel.SetActive(true);
-                    isMenuActive = true;
-                }
-            }
-
+            Application.Quit();
         }
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            if (isServer)
+            {
+                networkManager.StopHost();
+                inGameMenuPanel.SetActive(false);
+            }
+            else
+            {
+                networkManager.StopClient();
+                inGameMenuPanel.SetActive(false);
+            }
+        }
+
     }
+
+    void OpenInGameMenu()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && !MenuScript.isMainMenuActive)
+        {
+            if (isMenuActive)
+            {
+                inGameMenuPanel.SetActive(false);
+                isMenuActive = false;
+            }
+            else
+            {
+                inGameMenuPanel.SetActive(true);
+                isMenuActive = true;
+            }
+        }
+
+    }
+
+
     public void OnExitClick()
     {
         Application.Quit();
-
+        Debug.Log("Quitting...");
     }
 
     public void OnReturnToMainMenuClick()
     {
-        SceneManager.LoadScene(mainMenuSceneName);
-        //inGameMenuCanvas.SetActive(false);
+        //SceneManager.LoadScene(mainMenuSceneName);
+        //MenuScript.isMainMenuActive = false;
+
+        if (isServer)
+        {
+            networkManager.StopHost();
+            inGameMenuPanel.SetActive(false);
+        }
+        else
+        {
+            networkManager.StopClient();
+            inGameMenuPanel.SetActive(false);
+        }
 
     }
 
