@@ -1,7 +1,12 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - CharacterAnimationStateController
     - CharacterControll
+    - GreatSwordMovement
+    - HealthDisplay
+    - HealthLookAtCamera
+    - HealthScripts
     - PaladinAnimationController
     Mirror.Components.dll:
     - Mirror.NetworkAnimator
@@ -13,16 +18,17 @@ ScriptsOnlyBuild:
     - kcp2k.KcpTransport
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.Text
     com.unity.quicksearch.dll:
     - Unity.QuickSearch.SearchDatabase
   sceneClasses:
@@ -68,24 +74,44 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1458}
+      Script: {instanceID: 1446}
     - Class: 114
-      Script: {instanceID: 1646}
+      Script: {instanceID: 1448}
     - Class: 114
-      Script: {instanceID: 3188}
+      Script: {instanceID: 1496}
     - Class: 114
-      Script: {instanceID: 4328}
+      Script: {instanceID: 2140}
     - Class: 114
-      Script: {instanceID: 4494}
+      Script: {instanceID: 2280}
     - Class: 114
-      Script: {instanceID: 4576}
+      Script: {instanceID: 2486}
     - Class: 114
-      Script: {instanceID: 4630}
+      Script: {instanceID: 2604}
     - Class: 114
-      Script: {instanceID: 4698}
+      Script: {instanceID: 3026}
+    - Class: 114
+      Script: {instanceID: 3228}
+    - Class: 114
+      Script: {instanceID: 4322}
+    - Class: 114
+      Script: {instanceID: 4372}
+    - Class: 114
+      Script: {instanceID: 4540}
+    - Class: 114
+      Script: {instanceID: 4624}
+    - Class: 114
+      Script: {instanceID: 4678}
+    - Class: 114
+      Script: {instanceID: 4746}
+    - Class: 114
+      Script: {instanceID: 19982}
+    - Class: 114
+      Script: {instanceID: 19994}
+    - Class: 114
+      Script: {instanceID: 23188}
     - Class: 115
       Script: {instanceID: 0}
-    - Class: 136
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 137
       Script: {instanceID: 0}
@@ -94,6 +120,14 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -186,12 +220,6 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Components.dll
     namespaceName: Mirror
     className: NetworkLobbyPlayer
-  - hash:
-      serializedVersion: 2
-      Hash: 3a4f20df0a5505ccfd0f7fc75e4460ec
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CharacterControll
   - hash:
       serializedVersion: 2
       Hash: 6bc76e17f0d5e93f3eea7f5a2fe227f3
@@ -314,6 +342,12 @@ ScriptsOnlyBuild:
     className: ShootingTankBehaviour
   - hash:
       serializedVersion: 2
+      Hash: 3a4f20df0a5505ccfd0f7fc75e4460ec
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CharacterControll
+  - hash:
+      serializedVersion: 2
       Hash: c1d728126ff1918728036c59106d32b2
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -354,6 +388,12 @@ ScriptsOnlyBuild:
     assemblyName: SimpleWebTransport.dll
     namespaceName: Mirror.SimpleWeb
     className: SimpleWebTransport
+  - hash:
+      serializedVersion: 2
+      Hash: e65dd78d366342a1b9fa59c717ad970e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SwordAndShieldMovement
   - hash:
       serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
@@ -812,6 +852,18 @@ ScriptsOnlyBuild:
     className: TMP_Settings
   - hash:
       serializedVersion: 2
+      Hash: 8792e31a9058149f5b34d900599f9f1c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GreatSwordMovement
+  - hash:
+      serializedVersion: 2
+      Hash: 69120451ebecef69a62c6c18b0e8a155
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MovingCube
+  - hash:
+      serializedVersion: 2
       Hash: e1be6cb5fb432e26f64fcb687a018983
     assemblyName: Mirror.Components.dll
     namespaceName: Mirror
@@ -840,6 +892,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.MultipleAdditiveScenes
     className: PhysicsCollision
+  - hash:
+      serializedVersion: 2
+      Hash: b79b5699d3e61df7ddd0f2a63252ae57
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BonkMovement
   - hash:
       serializedVersion: 2
       Hash: b26c6f4c6312e2952bbe7d0df1ea026e
@@ -882,6 +940,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.dll
     namespaceName: Mirror
     className: NetworkIdentity
+  - hash:
+      serializedVersion: 2
+      Hash: 8e5768791f3ce320e8ae0fff6315d0e6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AxeMovement
   - hash:
       serializedVersion: 2
       Hash: fd68d84f33fad85aac38f2739c0ee270
@@ -1008,7 +1072,25 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.NetworkRoom
     className: NetworkRoomPlayerExt
+  - hash:
+      serializedVersion: 2
+      Hash: 514775331e04882828052c5022b7ab5d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HealthScripts
+  - hash:
+      serializedVersion: 2
+      Hash: 39f2b9eb854a99adab23f3719923bd75
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HealthDisplay
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HealthLookAtCamera
   platform: 19
   scenePathNames:
   - Assets/Abdula/Scenes/NetworkOnlineScene.unity
-  playerPath: C:/Users/abdula.fazeli/Downloads/Test game/Te4SecondGame.exe
+  playerPath: C:/Build/Te4SecondGame.exe
