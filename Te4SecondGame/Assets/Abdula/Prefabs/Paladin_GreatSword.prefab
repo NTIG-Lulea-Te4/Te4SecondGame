@@ -93,6 +93,8 @@ GameObject:
   - component: {fileID: 8035180255105468920}
   - component: {fileID: 7255738816568769231}
   - component: {fileID: 6021495506134235530}
+  - component: {fileID: 7384755064640358898}
+  - component: {fileID: 908316725953145006}
   m_Layer: 6
   m_Name: Paladin_GreatSword
   m_TagString: Player
@@ -289,10 +291,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e92a39b50e1aab844983a8927fa75e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  greatSwordLight: 0
   greatSwordParry: 0
   greatSwordHeavy: 0
   greatSwordSpecial: 0
+--- !u!114 &7384755064640358898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633258588722418104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8f730c594c7cf42a86e3d5eee150d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &908316725953145006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633258588722418104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01728dad583598745b9bb68b510c37e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blood: {fileID: 5042090177798578218, guid: 925b69f460e63354eaeb63c2eee1833b, type: 3}
+  death: {fileID: 1834194341294532, guid: d5f26854a8904624c8073139cd2eb346, type: 3}
+  damageText: {fileID: 9123674844181685227, guid: 515faa8600ece6d4e94c3d4d081674dd, type: 3}
+--- !u!114 &6021387565770030086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6929528007919881627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aab4b895ed1e1324cb020d842857636b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &803462957490788956
 GameObject:
   m_ObjectHideFlags: 0
@@ -2682,10 +2722,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7635604858879014041, guid: dfe90e2634000634fb162d127c5cbc99, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635604858879014043, guid: dfe90e2634000634fb162d127c5cbc99, type: 3}
+      propertyPath: m_TagString
+      value: GreatSwordID
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfe90e2634000634fb162d127c5cbc99, type: 3}
 --- !u!4 &6929528007094636631 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7635604857565129047, guid: dfe90e2634000634fb162d127c5cbc99, type: 3}
+  m_PrefabInstance: {fileID: 710934510678948096}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6929528007919881627 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7635604858879014043, guid: dfe90e2634000634fb162d127c5cbc99, type: 3}
   m_PrefabInstance: {fileID: 710934510678948096}
   m_PrefabAsset: {fileID: 0}

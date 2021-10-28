@@ -11,6 +11,7 @@ public class AxeMovement : MonoBehaviour
     public bool axeSpecial;
     private float currentTime;
     private float startingTime;
+    public static int axeDmg;
 
 
     // Start is called before the first frame update
@@ -33,6 +34,7 @@ public class AxeMovement : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && axeLight == false)
         {
             animate.SetBool("axeLight", true);
+            axeDmg = -10;
         }
         else if (Input.GetButtonUp("Fire1"))
         {
@@ -44,6 +46,7 @@ public class AxeMovement : MonoBehaviour
         if (Input.GetButtonDown("Fire2") && axeHeavy == false)
         {
             animate.SetBool("axeHeavy", true);
+            axeDmg = -20;
         }
         else if (Input.GetButtonUp("Fire2"))
         {
@@ -54,6 +57,7 @@ public class AxeMovement : MonoBehaviour
         if (Input.GetButtonDown("Fire3") && axeSpecial == false)
         {
             animate.SetBool("axeSpecial", true);
+            axeDmg = -30;
 
         }
         else if (Input.GetButtonUp("Fire3"))
@@ -65,6 +69,7 @@ public class AxeMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && axeParry == false)
         {
             animate.SetBool("axeParry", true);
+            axeDmg = 0;
         }
         else if (Input.GetKeyUp(KeyCode.Space))
         {

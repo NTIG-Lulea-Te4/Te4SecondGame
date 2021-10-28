@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public static int health = 300;
+    public static int health = 100;
 
     void Update()
     {

@@ -8,6 +8,13 @@ TagManager:
   - Horizontal Inner Wall
   - Outer Wall
   - EnemyAI
+  - Trap
+  - weapon
+  - enemy
+  - player
+  - GreatSwordID
+  - SwordAndShieldID
+  - StopBankID
   layers:
   - Default
   - TransparentFX
