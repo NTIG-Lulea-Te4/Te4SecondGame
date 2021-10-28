@@ -12,22 +12,13 @@ public class BonkMovement : MonoBehaviour
     public bool attackingSH;
     public bool myAttackFlag;
     public bool secondAttackFlag;
-    private float currentTime;
-    private float startingTime;
-    private float startingSecondTime;
-    private float currentSecondTime;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
 
-        startingTime = 0f;
-        currentTime = 1.5f;
-        currentTime = startingTime;
-        startingSecondTime = 0f;
-        currentSecondTime = 1.5f;
-        currentSecondTime = startingSecondTime;
         animate = GetComponent<Animator>();
         parry = animate.GetBool("parry");
         attacking = animate.GetBool("attacking");
@@ -40,47 +31,15 @@ public class BonkMovement : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKeyDown(KeyCode.Mouse0) && attacking == false && myAttackFlag == false)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && attacking == false)
         {
             animate.SetBool("attacking", true);
         }
-        else if (Input.GetKeyUp(KeyCode.Mouse0) && myAttackFlag == false)
-        {
-            animate.SetBool("attacking", false);
-            myAttackFlag = true;
-        }
-        if (myAttackFlag == true)
-        {
-            currentTime += 1.5f * Time.deltaTime;
-            if (currentTime >= 1.5f)
-            {
-                
-                myAttackFlag = false;
-                currentTime = 0f;
-            }
-        }
-
-        if (secondAttackFlag == false && myAttackFlag && Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            animate.SetBool("attackingSH", true);
-
-        }
         else if (Input.GetKeyUp(KeyCode.Mouse0))
         {
-            animate.SetBool("attackingSH", false);
-            secondAttackFlag = true;
+            animate.SetBool("attacking", false);
         }
-        if (secondAttackFlag == true)
-        {
-            
-            currentSecondTime += 1.5f * Time.deltaTime;
-            if (currentSecondTime >= 1.5f)
-            {
 
-                secondAttackFlag = false;
-                currentSecondTime = 0f;
-            }
-        }
 
         if (Input.GetButtonDown("Fire2") && attacking == false)
         {

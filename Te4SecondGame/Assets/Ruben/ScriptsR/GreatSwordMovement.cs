@@ -1,24 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class GreatSwordMovement : MonoBehaviour
+public class GreatSwordMovement : NetworkBehaviour
 {
     Animator animate;
     public bool greatSwordLight;
     public bool greatSwordParry;
     public bool greatSwordHeavy;
     public bool greatSwordSpecial;
-    private float currentTime;
-    private float startingTime;
 
 
     // Start is called before the first frame update
+
+    
+    
+    
     void Start()
     {
-        currentTime = 1f;
-        startingTime = 0f;
-        currentTime = startingTime;
         animate = GetComponent<Animator>();
         greatSwordLight = animate.GetBool("greatSwordLight");
         greatSwordHeavy = animate.GetBool("greatSwordHeavy");
@@ -26,11 +26,10 @@ public class GreatSwordMovement : MonoBehaviour
         greatSwordSpecial = animate.GetBool("greatSwordSpecial");
     }
 
-    // Update is called once per frame
     void Update()
     {
 
-        if (Input.GetButtonDown("Fire1") && greatSwordLight == false)
+        if (Input.GetButtonDown("Fire1") && greatSwordLight == false && hasAuthority)
         {
             animate.SetBool("greatSwordLight", true);
         }
@@ -38,8 +37,8 @@ public class GreatSwordMovement : MonoBehaviour
         {
             animate.SetBool("greatSwordLight", false);
 
-            currentTime += 1f * Time.deltaTime;
         }
+
 
         if (Input.GetButtonDown("Fire2") && greatSwordHeavy == false)
         {
@@ -71,4 +70,5 @@ public class GreatSwordMovement : MonoBehaviour
             animate.SetBool("greatSwordParry", false);
         }
     }
+
 }

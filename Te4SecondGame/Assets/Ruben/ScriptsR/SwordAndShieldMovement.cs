@@ -9,16 +9,12 @@ public class SwordAndShieldMovement : MonoBehaviour
     public bool shieldParry;
     public bool swordAndShieldHeavy;
     public bool swordAndShieldSpecial;
-    private float currentTime;
-    private float startingTime;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
-        currentTime = 1f;
-        startingTime = 0f;
-        currentTime = startingTime;
         animate = GetComponent<Animator>();
         swordLight = animate.GetBool("swordLight");
         shieldParry = animate.GetBool("shieldParry");
@@ -38,7 +34,6 @@ public class SwordAndShieldMovement : MonoBehaviour
         {
             animate.SetBool("swordLight", false);
 
-            currentTime += 1f * Time.deltaTime;
         }
 
         if (Input.GetButtonDown("Fire2") && swordAndShieldHeavy == false)
