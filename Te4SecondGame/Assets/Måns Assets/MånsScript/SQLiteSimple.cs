@@ -111,7 +111,7 @@ public class SQLiteSimple : MonoBehaviour
 
             using (SqliteCommand command = connection.CreateCommand())
             {
-                command.CommandText = "SELECT * FROM scores;";
+                command.CommandText = "SELECT *, MAX(score) FROM scores;";
 
                 using (SqliteDataReader reader = command.ExecuteReader())
                 {
