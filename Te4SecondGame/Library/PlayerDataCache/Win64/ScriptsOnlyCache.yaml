@@ -14,11 +14,9 @@ ScriptsOnlyBuild:
     - Mirror.NetworkManager
     - kcp2k.KcpTransport
     SteamVR.dll:
-    - Valve.VR.SteamVR_Behaviour_Skeleton
     - Valve.VR.SteamVR_ExternalCamera
     - Valve.VR.SteamVR_Settings
     - Valve.VR.SteamVR_Skeleton_Pose
-    - Valve.VR.SteamVR_Skeleton_Poser
     SteamVR_Editor.dll:
     - Valve.VR.SteamVR_UnitySettingsWindow
     Unity.Rider.Editor.dll:
@@ -114,17 +112,9 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
-    - Class: 74
-      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 89
-      Script: {instanceID: 0}
-    - Class: 90
-      Script: {instanceID: 0}
-    - Class: 91
-      Script: {instanceID: 0}
-    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -163,8 +153,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3478}
     - Class: 114
-      Script: {instanceID: 3700}
-    - Class: 114
       Script: {instanceID: 3704}
     - Class: 114
       Script: {instanceID: 4200}
@@ -182,13 +170,9 @@ ScriptsOnlyBuild:
       Script: {instanceID: 5008}
     - Class: 114
       Script: {instanceID: 5040}
-    - Class: 114
-      Script: {instanceID: 5218}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
-      Script: {instanceID: 0}
-    - Class: 137
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
