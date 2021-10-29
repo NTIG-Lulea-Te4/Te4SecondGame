@@ -4,7 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - DontDestroy
+  - Vertical Inner Wall
+  - Horizontal Inner Wall
+  - Outer Wall
+  - EnemyAI
+  - Trap
+  - weapon
+  - enemy
+  - player
+  - GreatSwordID
+  - SwordAndShieldID
+  - StopBankID
   layers:
   - Default
   - TransparentFX
@@ -12,8 +22,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Player
+  - Hand
   - 
   - 
   - 
