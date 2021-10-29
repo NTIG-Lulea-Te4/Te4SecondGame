@@ -49,13 +49,13 @@ public class SwordAndShieldMovement : MonoBehaviour
 
         }
 
-        if (Input.GetButtonDown("Fire3") && swordAndShieldSpecial == false)
+        if (Input.GetKeyDown(KeyCode.Mouse2) && swordAndShieldSpecial == false)
         {
             animate.SetBool("specialHit", true);
             SAO = -30;
 
         }
-        else if (Input.GetButtonUp("Fire3"))
+        else if (Input.GetKeyUp(KeyCode.Mouse2))
         {
             animate.SetBool("specialHit", false);
 

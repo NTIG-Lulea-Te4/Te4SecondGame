@@ -52,12 +52,12 @@ public class BonkMovement : MonoBehaviour
 
         }
 
-        if (Input.GetButtonDown("Fire3") && attacking == false)
+        if (Input.GetKeyDown(KeyCode.Mouse2) && attacking == false)
         {
             animate.SetBool("attackingH", true);
 
         }
-        else if (Input.GetButtonUp("Fire3"))
+        else if (Input.GetKeyUp(KeyCode.Mouse2))
         {
             animate.SetBool("attackingH", false);
             weaponDamage = -5;

@@ -48,13 +48,13 @@ public class AxeMovement : MonoBehaviour
 
         }
 
-        if (Input.GetButtonDown("Fire3") && axeSpecial == false)
+        if (Input.GetKeyDown(KeyCode.Mouse2) && axeSpecial == false)
         {
             animate.SetBool("axeSpecial", true);
             axeDmg = -10;
 
         }
-        else if (Input.GetButtonUp("Fire3"))
+        else if (Input.GetKeyUp(KeyCode.Mouse2))
         {
             animate.SetBool("axeSpecial", false);
 
