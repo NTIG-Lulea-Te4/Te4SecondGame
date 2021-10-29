@@ -9,7 +9,7 @@ public class SwordAndShieldMovement : MonoBehaviour
     public bool shieldParry;
     public bool swordAndShieldHeavy;
     public bool swordAndShieldSpecial;
-    public static int SAO;
+    public static int sAO;
 
 
 
@@ -27,11 +27,11 @@ public class SwordAndShieldMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        BonkMovement.weaponDamage = SAO;
+        //BonkMovement.weaponDamage = SAO;
         if (Input.GetButtonDown("Fire1") && swordLight == false)
         {
             animate.SetBool("swordLight", true);
-            SAO = -10;
+            sAO = -10;
         }
         else if (Input.GetButtonUp("Fire1"))
         {
@@ -41,7 +41,7 @@ public class SwordAndShieldMovement : MonoBehaviour
         if (Input.GetButtonDown("Fire2") && swordAndShieldHeavy == false)
         {
             animate.SetBool("swordHeavy", true);
-            SAO = -20;
+            sAO = -20;
         }
         else if (Input.GetButtonUp("Fire2"))
         {
@@ -52,7 +52,7 @@ public class SwordAndShieldMovement : MonoBehaviour
         if (Input.GetButtonDown("Fire3") && swordAndShieldSpecial == false)
         {
             animate.SetBool("specialHit", true);
-            SAO = -30;
+            sAO = -30;
 
         }
         else if (Input.GetButtonUp("Fire3"))
@@ -64,7 +64,7 @@ public class SwordAndShieldMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q) && shieldParry == false)
         {
             animate.SetBool("shieldParry", true);
-            SAO = 0;
+            sAO = 0;
         }
         else if (Input.GetKeyUp(KeyCode.Q))
         {

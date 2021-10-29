@@ -18,9 +18,9 @@ public class OldEffect : MonoBehaviour
             damageText.text = SwordMovement.attackDamage.ToString();
             Instantiate(damageText, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), transform.rotation);
         }
-        if (TestHealth.health <= 0)
-        {
-            Instantiate(death, transform.position, transform.rotation);
-        }
+        //if (TestHealth.health <= 0)
+        //{
+        //    Instantiate(death, transform.position, transform.rotation);
+        //}
     }
 }

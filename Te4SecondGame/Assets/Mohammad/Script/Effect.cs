@@ -20,9 +20,9 @@ public class Effect : MonoBehaviour
         if (collision.gameObject.tag.Equals("Trap"))
         {
             Instantiate(blood, transform.position, transform.rotation);
-            damageText.text = Trapsdmg.trapDamage.ToString();
+            //damageText.text = Trapsdmg.trapDamage.ToString();
             //Instantiate(damageText, transform.position, transform.rotation);
-            Instantiate(damageText, new Vector3(transform.position.x +3, transform.position.y, transform.position.z), transform.rotation);
+            Instantiate(damageText, new Vector3(transform.position.x +2, transform.position.y, transform.position.z), transform.rotation);
 
         }
     

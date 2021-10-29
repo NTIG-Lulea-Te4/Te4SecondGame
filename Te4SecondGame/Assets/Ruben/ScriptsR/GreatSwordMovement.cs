@@ -30,7 +30,6 @@ public class GreatSwordMovement : MonoBehaviour
         {
             animate.SetBool("greatSwordLight", true);
             greatSwordDamage = -20;
-            Debug.Log(greatSwordDamage);
 
         }
         else if (Input.GetButtonUp("Fire1"))
@@ -42,7 +41,6 @@ public class GreatSwordMovement : MonoBehaviour
         {
             animate.SetBool("greatSwordHeavy", true);
             greatSwordDamage = -25;
-            Debug.Log(greatSwordDamage);
 
         }
         else if (Input.GetButtonUp("Fire2"))
@@ -69,7 +67,6 @@ public class GreatSwordMovement : MonoBehaviour
         {
             animate.SetBool("greatSwordParry", true);
             greatSwordDamage = 0;
-            Debug.Log(greatSwordDamage);
         }
         else if (Input.GetKeyUp(KeyCode.Q))
         { 

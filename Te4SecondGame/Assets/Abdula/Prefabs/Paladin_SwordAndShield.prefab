@@ -93,6 +93,8 @@ GameObject:
   - component: {fileID: 8035180255105468920}
   - component: {fileID: 7255738816568769231}
   - component: {fileID: 3865589715783629558}
+  - component: {fileID: 6000505218858302202}
+  - component: {fileID: 8536633406951925270}
   m_Layer: 6
   m_Name: Paladin_SwordAndShield
   m_TagString: Player
@@ -293,6 +295,33 @@ MonoBehaviour:
   shieldParry: 0
   swordAndShieldHeavy: 0
   swordAndShieldSpecial: 0
+--- !u!114 &6000505218858302202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633258588722418104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8f730c594c7cf42a86e3d5eee150d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8536633406951925270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633258588722418104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01728dad583598745b9bb68b510c37e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blood: {fileID: 5042090177798578218, guid: 925b69f460e63354eaeb63c2eee1833b, type: 3}
+  death: {fileID: 1834194341294532, guid: d5f26854a8904624c8073139cd2eb346, type: 3}
+  damageText: {fileID: 9123674844181685227, guid: 515faa8600ece6d4e94c3d4d081674dd, type: 3}
 --- !u!1 &803462957490788956
 GameObject:
   m_ObjectHideFlags: 0
@@ -2728,7 +2757,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8635830618657409108, guid: ed4ef6289ae1fc54885e42eb4d35acd3, type: 3}
       propertyPath: m_TagString
-      value: SwordAndShieldID
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635830618693930544, guid: ed4ef6289ae1fc54885e42eb4d35acd3, type: 3}
+      propertyPath: m_Size.y
+      value: 0.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635830618693930544, guid: ed4ef6289ae1fc54885e42eb4d35acd3, type: 3}
+      propertyPath: m_Center.y
+      value: 0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635830618693930544, guid: ed4ef6289ae1fc54885e42eb4d35acd3, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635830618693930546, guid: ed4ef6289ae1fc54885e42eb4d35acd3, type: 3}
+      propertyPath: m_TagString
+      value: weapon
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed4ef6289ae1fc54885e42eb4d35acd3, type: 3}

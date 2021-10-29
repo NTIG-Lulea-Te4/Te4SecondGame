@@ -15,7 +15,7 @@ public class AxeMovement : MonoBehaviour
     void Start()
     {
         animate = GetComponent<Animator>();
-        BonkMovement.weaponDamage = axeDmg;
+        //BonkMovement.weaponDamage = axeDmg;
         axeParry = animate.GetBool("axeParry");
         axeLight = animate.GetBool("axeLight");
         axeHeavy = animate.GetBool("axeHeavy");
@@ -40,7 +40,7 @@ public class AxeMovement : MonoBehaviour
         if (Input.GetButtonDown("Fire2") && axeHeavy == false)
         {
             animate.SetBool("axeHeavy", true);
-            axeDmg = -20;
+            axeDmg = -10;
         }
         else if (Input.GetButtonUp("Fire2"))
         {
@@ -51,7 +51,7 @@ public class AxeMovement : MonoBehaviour
         if (Input.GetButtonDown("Fire3") && axeSpecial == false)
         {
             animate.SetBool("axeSpecial", true);
-            axeDmg = -10;
+            axeDmg = -20;
 
         }
         else if (Input.GetButtonUp("Fire3"))

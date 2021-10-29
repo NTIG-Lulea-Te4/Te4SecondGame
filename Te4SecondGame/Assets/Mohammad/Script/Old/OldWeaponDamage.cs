@@ -12,8 +12,8 @@ public class OldWeaponDamage : NetworkBehaviour
             if (collision.gameObject.tag.Equals("Player"))
             {
 
-                Health.health += SwordMovement.attackDamage;
-                Debug.Log(Health.health);
+                Health.currentHealth += SwordMovement.attackDamage;
+                Debug.Log(Health.currentHealth);
 
             }
         }

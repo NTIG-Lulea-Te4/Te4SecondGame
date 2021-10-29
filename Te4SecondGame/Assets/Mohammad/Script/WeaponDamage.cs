@@ -6,21 +6,21 @@ public class WeaponDamage : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag.Equals("EnemyAI"))
-        {
-            AiHealth.Aihleath += BonkMovement.weaponDamage;
-            Debug.Log(AiHealth.Aihleath);
-        }
-        if (other.gameObject.tag.Equals("EnemyAI"))
-        {
-            AiHealth.Aihleath += SwordAndShieldMovement.SAO;
-            Debug.Log(AiHealth.Aihleath);
-        }
-        if (other.gameObject.tag.Equals("EnemyAI"))
-        {
-            AiHealth.Aihleath += AxeMovement.axeDmg;
-            Debug.Log(AiHealth.Aihleath);
-        }
+        //if (other.gameObject.tag.Equals("EnemyAI"))
+        //{
+        //    AiHealth.currentAihleath += BonkMovement.weaponDamage;
+        //    Debug.Log(AiHealth.currentAihleath);
+        //}
+        //if (other.gameObject.tag.Equals("EnemyAI"))
+        //{
+        //    AiHealth.currentAihleath += SwordAndShieldMovement.SAO;
+        //    Debug.Log(AiHealth.currentAihleath);
+        //}
+        //if (other.gameObject.tag.Equals("EnemyAI"))
+        //{
+        //    AiHealth.currentAihleath += AxeMovement.axeDmg;
+        //    Debug.Log(AiHealth.currentAihleath);
+        //}
 
 
     }

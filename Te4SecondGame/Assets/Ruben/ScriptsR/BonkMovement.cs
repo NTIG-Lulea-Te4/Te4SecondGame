@@ -44,7 +44,7 @@ public class BonkMovement : MonoBehaviour
         if (Input.GetButtonDown("Fire2") && attacking == false)
         {
             animate.SetBool("attackingSp", true);
-            weaponDamage = -20;
+            weaponDamage = -10;
         }
         else if (Input.GetButtonUp("Fire2"))
         {

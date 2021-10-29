@@ -4,13 +4,48 @@ using UnityEngine;
 
 public class Trapsdmg : MonoBehaviour
 {
-    public static int trapDamage = -20;
-    void OnTriggerEnter(Collider collision)
+    public static int trapDamage = -50;
+    //public int damnit;
+    //private AiHealth ai;
+
+    //public AiHealth aiheath;
+    //public int currentAiHealth;
+    void Start()
     {
-        if (collision.gameObject.tag.Equals("Player"))
-        {
-            Health.health += trapDamage;
-            Debug.Log(Health.health);
-        }
+        //aiheath = FindObjectOfType<AiHealth>();
+
+        //GetComponent<AiHealth>().currentAihleath = currentAiHealth;
+
     }
+
+    //void Awake()
+    //{
+    //    ai = GameObject.FindObjectOfType<AiHealth>();
+    //}
+
+    //void OnTriggerEnter(Collider collision)
+    //{
+    //    if (collision.gameObject.tag.Equals("Player"))
+    //    {
+    //        Health.currentHealth += trapDamage;
+    //        Debug.Log(Health.currentHealth);
+    //    }
+    //    if (collision.gameObject.tag.Equals("EnemyAI"))
+    //    {
+    //        GetComponent<TestHealth>().omg();
+            //GameObject theHealth = GameObject.Find("TheHealth");
+            //TestHealth aiHealth = theHealth.GetComponent<TestHealth>();
+            //aiHealth.currentAihleath -= trapDamage;
+            //Debug.Log(aiHealth.currentAihleath);
+            //ai.UpdateSCore(trapDamage);
+            //damnit -= trapDamage;
+            //aiheath.currentAihleath += trapDamage;
+            //Debug.Log(aiheath.currentAihleath);
+            //currentAiHealth -= trapDamage;
+            //AiHealth.currentAihleath += trapDamage;
+
+            //GetComponent<TestSwordDmg>().SummoningStone();
+            //GameObject.Find("ThePlayer").GetComponent<AiHealth>().currentAihleath += trapDamage;
+            //Debug.Log(currentAihleath);
+    
 }

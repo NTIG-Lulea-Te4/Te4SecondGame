@@ -93,6 +93,9 @@ GameObject:
   - component: {fileID: 8035180255105468920}
   - component: {fileID: 7255738816568769231}
   - component: {fileID: 5118800775892179423}
+  - component: {fileID: 8766462749475276288}
+  - component: {fileID: 5314158191155975658}
+  - component: {fileID: 5788933816251051789}
   m_Layer: 6
   m_Name: Paladin_StopBonk
   m_TagString: Player
@@ -294,8 +297,45 @@ MonoBehaviour:
   attackingH: 0
   attackingSp: 0
   attackingSH: 0
-  myAttackFlag: 0
-  secondAttackFlag: 0
+--- !u!114 &8766462749475276288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633258588722418104}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8f730c594c7cf42a86e3d5eee150d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5314158191155975658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633258588722418104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01728dad583598745b9bb68b510c37e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blood: {fileID: 5042090177798578218, guid: 925b69f460e63354eaeb63c2eee1833b, type: 3}
+  death: {fileID: 1834194341294532, guid: d5f26854a8904624c8073139cd2eb346, type: 3}
+  damageText: {fileID: 9123674844181685227, guid: 515faa8600ece6d4e94c3d4d081674dd, type: 3}
+--- !u!114 &5788933816251051789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633258588722418104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba2e448369837c84f8c8a854df04ef86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &803462957490788956
 GameObject:
   m_ObjectHideFlags: 0
@@ -1130,6 +1170,20 @@ Transform:
   m_Father: {fileID: 62186634834136739}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &1752022638737804663
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4385183744165022384}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.09
+  m_Height: 1.45
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.19, z: 0.51}
 --- !u!114 &1662001620067539112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2638,12 +2692,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 8791323290948534161}
     m_Modifications:
     - target: {fileID: 1101084544504302049, guid: 71f54925a6a1b5147a57d54e022d5cc0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1101084544504302049, guid: 71f54925a6a1b5147a57d54e022d5cc0, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1101084544504302055, guid: 71f54925a6a1b5147a57d54e022d5cc0, type: 3}
+      propertyPath: m_TagString
+      value: weapon
+      objectReference: {fileID: 0}
     - target: {fileID: 1101084545698389937, guid: 71f54925a6a1b5147a57d54e022d5cc0, type: 3}
       propertyPath: m_TagString
-      value: StopBankID
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 1101084545698389939, guid: 71f54925a6a1b5147a57d54e022d5cc0, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5707387784237768581, guid: 71f54925a6a1b5147a57d54e022d5cc0, type: 3}
       propertyPath: m_RootOrder
@@ -2707,13 +2773,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71f54925a6a1b5147a57d54e022d5cc0, type: 3}
---- !u!4 &8982479063226080466 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5707387784237768581, guid: 71f54925a6a1b5147a57d54e022d5cc0, type: 3}
-  m_PrefabInstance: {fileID: 3719018841072468823}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4385183744165022384 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1101084544504302055, guid: 71f54925a6a1b5147a57d54e022d5cc0, type: 3}
+  m_PrefabInstance: {fileID: 3719018841072468823}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8982479063226080466 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5707387784237768581, guid: 71f54925a6a1b5147a57d54e022d5cc0, type: 3}
   m_PrefabInstance: {fileID: 3719018841072468823}
   m_PrefabAsset: {fileID: 0}

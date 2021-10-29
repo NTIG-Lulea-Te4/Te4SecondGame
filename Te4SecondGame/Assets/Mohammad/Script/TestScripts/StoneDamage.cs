@@ -8,7 +8,7 @@ public class StoneDamage : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("Player"))
         {
-            Health.health -= SwordMovement.attackDamage;
+            Health.currentHealth -= SwordMovement.attackDamage;
         }
         
     }

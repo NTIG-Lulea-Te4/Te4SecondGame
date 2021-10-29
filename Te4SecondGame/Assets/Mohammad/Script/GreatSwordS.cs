@@ -9,8 +9,8 @@ public class GreatSwordS : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("EnemyAI"))
         {
-            AiHealth.Aihleath += GreatSwordMovement.greatSwordDamage;
-            Debug.Log(AiHealth.Aihleath);
+            //AiHealth.currentAihleath += GreatSwordMovement.greatSwordDamage;
+            //Debug.Log(AiHealth.currentAihleath);
         }
         //public void OnTriggerStay(Collider other)
         //    {

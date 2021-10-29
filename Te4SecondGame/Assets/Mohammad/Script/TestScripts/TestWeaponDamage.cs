@@ -9,8 +9,8 @@ public class TestWeaponDamage : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("Player"))
         {
-            Health.health += TestWeapndmg;
-            Debug.Log(Health.health);
+            Health.currentHealth += TestWeapndmg;
+            Debug.Log(Health.currentHealth);
         }
     }
 }
