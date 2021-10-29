@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class GreatSwordMovement : MonoBehaviour
+using Mirror;
+public class GreatSwordMovement : NetworkBehaviour
 {
     Animator animate;
     public static bool greatSwordLight;
