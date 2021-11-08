@@ -2722,6 +2722,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7635604858697381676, guid: dfe90e2634000634fb162d127c5cbc99, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635604858697381678, guid: dfe90e2634000634fb162d127c5cbc99, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7635604858879014041, guid: dfe90e2634000634fb162d127c5cbc99, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -2733,6 +2741,10 @@ PrefabInstance:
     - target: {fileID: 7635604858879014043, guid: dfe90e2634000634fb162d127c5cbc99, type: 3}
       propertyPath: m_TagString
       value: GreatSwordID
+      objectReference: {fileID: 0}
+    - target: {fileID: 8501901763999311803, guid: dfe90e2634000634fb162d127c5cbc99, type: 3}
+      propertyPath: m_AssetId
+      value: 99e72afed5ff8314d9588baace5f891e
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfe90e2634000634fb162d127c5cbc99, type: 3}

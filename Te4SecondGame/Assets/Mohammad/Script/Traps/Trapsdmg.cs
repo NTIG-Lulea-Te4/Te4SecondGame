@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Trapsdmg : MonoBehaviour
 {
-    public static int trapDamage = -50;
+    public static int trapDamage = -10;
     //public int damnit;
     //private AiHealth ai;
 
