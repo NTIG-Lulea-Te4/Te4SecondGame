@@ -10,8 +10,6 @@ public class BonkMovement : MonoBehaviour
     public bool attackingH;
     public bool attackingSp;
     public bool attackingSH;
-    public bool myAttackFlag;
-    public bool secondAttackFlag;
     public static int weaponDamage;
 
 
@@ -54,24 +52,24 @@ public class BonkMovement : MonoBehaviour
 
         }
 
-        if (Input.GetButtonDown("Fire3") && attacking == false)
+        if (Input.GetKeyDown(KeyCode.Mouse2) && attacking == false)
         {
             animate.SetBool("attackingH", true);
 
         }
-        else if (Input.GetButtonUp("Fire3"))
+        else if (Input.GetKeyUp(KeyCode.Mouse2))
         {
             animate.SetBool("attackingH", false);
             weaponDamage = -5;
 
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && parry == false)
+        if (Input.GetKeyDown(KeyCode.Q) && parry == false)
         {
             animate.SetBool("parry", true);
             weaponDamage = 0;
         }
-        else if (Input.GetKeyUp(KeyCode.Space))
+        else if (Input.GetKeyUp(KeyCode.Q))
         {
             animate.SetBool("parry", false);
         }
